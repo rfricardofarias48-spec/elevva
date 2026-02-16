@@ -25,8 +25,8 @@ export const DemoSection: React.FC = () => {
         </div>
 
         {/* MAIN INTERFACE - TABLET STYLE */}
-        {/* Aumentado para w-[120%] e -ml-[10%] no mobile para parecer maior */}
-        <div className="w-[120%] -ml-[10%] sm:w-full sm:mx-auto max-w-[1000px] relative perspective-1000 mt-10 md:mt-0 group">
+        {/* Aumentado max-w para lg:max-w-[1400px] no desktop para ficar ainda mais largo */}
+        <div className="w-[120%] -ml-[10%] sm:w-full sm:mx-auto max-w-[1000px] lg:max-w-[1400px] relative perspective-1000 mt-10 md:mt-0 group">
            
            {/* Decorative Glow behind the tablet */}
            <div className="absolute -inset-4 bg-brand-neon rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-700 -z-10"></div>
@@ -42,8 +42,8 @@ export const DemoSection: React.FC = () => {
               <div className="bg-black rounded-[1.4rem] p-1.5 shadow-inner relative">
                   
                   {/* Screen Content */}
-                  {/* ALTERADO: aspect-[3/2] fixo para igualar ao Hero, removido lg:aspect-[2.1/1] */}
-                  <div className="relative rounded-[1.1rem] overflow-hidden bg-black shadow-lg border border-white/5 aspect-[3/2]">
+                  {/* ALTERADO: lg:aspect-[2.2/1] para aumentar um pouco a altura verticalmente (era 2.5/1) */}
+                  <div className="relative rounded-[1.1rem] overflow-hidden bg-black shadow-lg border border-white/5 aspect-[3/2] lg:aspect-[2.2/1]">
                     
                     {/* VIDEO - Visível apenas no Mobile (lg:hidden) */}
                     <video 
@@ -56,10 +56,11 @@ export const DemoSection: React.FC = () => {
                     />
 
                     {/* IMAGEM - Visível apenas no PC/Desktop (hidden lg:block) */}
+                    {/* Alterado: scale-[1.03] para scale-100 e object-center para object-top */}
                     <img 
                       src="https://ik.imagekit.io/xsbrdnr0y/2tela.png?updatedAt=1771130848542"
                       alt="Interface Desktop"
-                      className="w-full h-full object-cover object-center scale-[1.03] hidden lg:block"
+                      className="w-full h-full object-cover object-top scale-100 hidden lg:block"
                     />
                     
                     {/* Screen Reflection Glare */}

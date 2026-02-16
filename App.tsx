@@ -41,7 +41,7 @@ const App: React.FC = () => {
   const closeTerms = () => setIsTermsOpen(false);
 
   // Roteamento Simples
-  if (currentPath === '/login') {
+  if (currentPath === '/app') {
     return <LoginScreen onNavigate={navigate} />;
   }
 

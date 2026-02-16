@@ -28,8 +28,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     e.preventDefault();
     setMobileMenuOpen(false);
 
-    // Se estivermos na tela de login, precisamos navegar para a home primeiro
-    if (window.location.pathname === '/login') {
+    // Se estivermos na tela de app, precisamos navegar para a home primeiro
+    if (window.location.pathname === '/app') {
       onNavigate('/');
       // Pequeno delay para permitir a renderização da home antes do scroll
       setTimeout(() => {
@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const handleLoginClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    onNavigate('/login');
+    onNavigate('/app');
   };
 
   return (
@@ -93,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </a>
           ))}
           <a 
-            href="/login"
+            href="/app"
             onClick={handleLoginClick}
             className="bg-brand-black text-white px-6 py-2.5 rounded-lg font-bold hover:bg-brand-neon hover:text-black hover:shadow-neo transition-all border border-black text-sm cursor-pointer"
           >
@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </a>
           ))}
           <a 
-            href="/login"
+            href="/app"
             onClick={handleLoginClick}
             className="w-full bg-brand-neon text-black border border-black py-4 rounded-xl font-bold mt-4 text-lg shadow-neo active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
           >
