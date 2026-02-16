@@ -24,17 +24,22 @@ export const DemoSection: React.FC = () => {
           </p>
         </div>
 
-        {/* MAIN INTERFACE IMAGE */}
-        {/* Aumentado width para 120% no mobile e margem negativa para expandir a imagem */}
-        <div className="w-[120%] -ml-[10%] md:w-full md:ml-0 relative group mt-10 md:mt-0">
+        {/* MAIN INTERFACE VIDEO */}
+        {/* Aumentado width para 120% no mobile e margem negativa ajustada para -ml-[5%] para deslocar levemente à direita */}
+        <div className="w-[120%] -ml-[5%] md:w-full md:ml-0 relative group mt-10 md:mt-0">
            {/* Decorative Glow */}
            <div className="absolute -inset-0.5 bg-brand-neon rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
            
-           <img 
-            src="https://ik.imagekit.io/xsbrdnr0y/2tela.png" 
-            alt="Dashboard da Plataforma Elevva mostrando análise de candidatos" 
-            className="relative w-full rounded-[2rem] border-2 border-black shadow-neo-lg"
-           />
+           <div className="relative w-full aspect-video rounded-[2rem] border-2 border-black shadow-neo-lg overflow-hidden bg-gray-100">
+             <video 
+              src="https://ik.imagekit.io/xsbrdnr0y/Video%20Project%207.mp4?updatedAt=1771127198468" 
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover scale-[1.03]"
+             />
+           </div>
         </div>
 
       </div>
