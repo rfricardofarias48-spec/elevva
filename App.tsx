@@ -12,6 +12,7 @@ import { Footer } from './components/Footer';
 import { CookieConsent } from './components/CookieConsent';
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
 import { TermsOfUseModal } from './components/TermsOfUseModal';
+import { LoginScreen } from './components/LoginScreen';
 
 const App: React.FC = () => {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
@@ -38,6 +39,11 @@ const App: React.FC = () => {
 
   const openTerms = () => setIsTermsOpen(true);
   const closeTerms = () => setIsTermsOpen(false);
+
+  // Roteamento Simples
+  if (currentPath === '/login') {
+    return <LoginScreen onNavigate={navigate} />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col font-sans relative bg-white text-brand-black selection:bg-brand-neon selection:text-black">
