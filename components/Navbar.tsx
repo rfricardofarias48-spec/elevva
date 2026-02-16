@@ -28,20 +28,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     e.preventDefault();
     setMobileMenuOpen(false);
 
-    // Se estivermos na tela de app, precisamos navegar para a home primeiro
-    if (window.location.pathname === '/app') {
-      onNavigate('/');
-      // Pequeno delay para permitir a renderização da home antes do scroll
-      setTimeout(() => {
-        scrollToElement(href);
-      }, 100);
-      return;
-    }
-
-    scrollToElement(href);
-  };
-
-  const scrollToElement = (href: string) => {
+    // Navegação simples com scroll
     const targetId = href.replace('/#', '');
     const element = document.getElementById(targetId);
     
@@ -55,15 +42,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         behavior: "smooth"
       });
     } else {
-      // Se não achar o elemento, apenas vai para o topo (caso de navegação simples)
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }
-
-  const handleLoginClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-    onNavigate('/app');
   };
 
   return (
@@ -71,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-4 md:px-8 flex justify-between items-center h-12 md:h-16">
         <a 
           href="/" 
-          onClick={(e) => { e.preventDefault(); onNavigate('/'); }}
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="flex items-center gap-3 cursor-pointer select-none group"
         >
           {/* LOGO ADAPTADO: PONTO MENOR E MAIS EMBAIXO */}
@@ -93,8 +73,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </a>
           ))}
           <a 
-            href="/app"
-            onClick={handleLoginClick}
+            href="https://app.elevva.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-brand-black text-white px-6 py-2.5 rounded-lg font-bold hover:bg-brand-neon hover:text-black hover:shadow-neo transition-all border border-black text-sm cursor-pointer"
           >
             Entrar
@@ -124,8 +105,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </a>
           ))}
           <a 
-            href="/app"
-            onClick={handleLoginClick}
+            href="https://app.elevva.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full bg-brand-neon text-black border border-black py-4 rounded-xl font-bold mt-4 text-lg shadow-neo active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
           >
             Login

@@ -10,7 +10,7 @@ const plans = [
     desc: "Para testar a potência da IA.",
     features: ["25 Currículos / mês", "1 Vaga", "Exportação em PDF"],
     isPopular: false,
-    link: "/app",
+    link: "https://app.elevva.com.br",
     buttonText: "Criar Conta Grátis"
   },
   {
