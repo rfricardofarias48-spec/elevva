@@ -80,8 +80,8 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Right Visual (Hyper-realistic Tablet - Bezel Less Style) */}
-        {/* ALTERADO: de -ml-[15%] para ml-[5%] no mobile para mover levemente à direita */}
-        <div className="flex-1 w-[120%] ml-[5%] sm:w-full sm:ml-0 max-w-[1000px] relative perspective-1000 mt-8 lg:mt-0">
+        {/* ALTERADO: de ml-[5%] para -ml-[5%] no mobile para ajustar levemente a esquerda */}
+        <div className="flex-1 w-[120%] -ml-[5%] sm:w-full sm:ml-0 max-w-[1000px] relative perspective-1000 mt-8 lg:mt-0">
            
            {/* Tablet Chassis - Reduced outer radius for tighter fit */}
            <div className="relative mx-auto bg-[#1a1a1a] rounded-[1.5rem] p-[2px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-white/10">

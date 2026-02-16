@@ -34,6 +34,24 @@ const features = [
 ];
 
 export const Features: React.FC = () => {
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <section id="standards" className="py-16 bg-white relative">
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6">
@@ -92,11 +110,19 @@ export const Features: React.FC = () => {
                    </p>
 
                    {feature.variant === 'neon' ? (
-                      <a href="#pricing" className="bg-black text-white px-8 py-4 rounded-xl inline-flex items-center gap-2 font-bold text-base cursor-pointer hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl w-full md:w-auto justify-center md:justify-start">
+                      <a 
+                        href="#pricing"
+                        onClick={(e) => scrollToSection(e, '#pricing')}
+                        className="bg-black text-white px-8 py-4 rounded-xl inline-flex items-center gap-2 font-bold text-base cursor-pointer hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl w-full md:w-auto justify-center md:justify-start"
+                      >
                          Começar Agora <ArrowRight size={20} />
                       </a>
                    ) : (
-                      <a href="#pricing" className="inline-flex items-center gap-2 font-black text-sm uppercase tracking-wide cursor-pointer group hover:text-brand-600 transition-colors border-b-2 border-black pb-1 hover:border-brand-600">
+                      <a 
+                        href="#pricing"
+                        onClick={(e) => scrollToSection(e, '#pricing')}
+                        className="inline-flex items-center gap-2 font-black text-sm uppercase tracking-wide cursor-pointer group hover:text-brand-600 transition-colors border-b-2 border-black pb-1 hover:border-brand-600"
+                      >
                          Teste agora <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                       </a>
                    )}

@@ -10,7 +10,7 @@ const plans = [
     desc: "Para testar a potência da IA.",
     features: ["25 Currículos / mês", "1 Vaga", "Exportação em PDF"],
     isPopular: false,
-    link: "#",
+    link: "/login",
     buttonText: "Criar Conta Grátis"
   },
   {
@@ -61,6 +61,7 @@ export const Pricing: React.FC = () => {
                 ${plan.isPopular ? 'bg-black text-white shadow-neo-lg scale-100 md:scale-105 z-10' : 'bg-white text-brand-black shadow-neo'}
               `}
             >
+              
               {plan.isPopular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-neon text-black px-4 py-1 rounded-full text-xs font-bold border border-black uppercase tracking-wider flex items-center gap-1 shadow-sm">
                   <Star size={12} className="fill-black" /> {plan.tag || 'Recomendado'}
@@ -68,14 +69,14 @@ export const Pricing: React.FC = () => {
               )}
 
               {plan.name === "Grátis" && (
-                 <div className="absolute -top-3 left-8 bg-gray-200 text-gray-600 px-3 py-1 rounded text-[10px] font-bold border border-gray-300 uppercase tracking-wider">
+                 <div className="absolute -top-3 left-8 bg-brand-neon text-black px-3 py-1 rounded text-[10px] font-bold border border-black uppercase tracking-wider shadow-sm z-20">
                     Experimente
                  </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
+              <h3 className="text-2xl font-bold mb-2 flex items-center gap-2 mt-2">
                 {plan.name}
-                {plan.name !== "Grátis" && <Zap size={20} className={plan.isPopular ? "text-brand-neon fill-brand-neon" : "text-black fill-black"} />}
+                {plan.name !== "Grátis" && <Zap size={20} className={plan.isPopular ? "text-brand-neon fill-brand-neon" : "text-black fill-brand-neon"} />}
               </h3>
               <p className={`text-sm mb-6 ${plan.isPopular ? 'text-gray-400' : 'text-gray-500'}`}>{plan.desc}</p>
               
@@ -91,7 +92,7 @@ export const Pricing: React.FC = () => {
               <ul className="space-y-4 mb-8 flex-1">
                  {plan.features.map((feat, idx) => (
                    <li key={idx} className="flex items-center gap-3 text-sm font-medium">
-                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${plan.isPopular ? 'bg-brand-neon text-black' : 'bg-black text-white'}`}>
+                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 border border-black ${plan.isPopular ? 'bg-brand-neon text-black border-none' : 'bg-brand-neon text-black'}`}>
                        <Check size={12} strokeWidth={4} />
                      </div>
                      {feat}
