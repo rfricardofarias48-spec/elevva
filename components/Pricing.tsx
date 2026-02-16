@@ -108,7 +108,7 @@ export const Pricing: React.FC = () => {
                   w-full py-4 rounded-xl font-bold border-2 transition-all text-center block
                   ${plan.isPopular 
                     ? 'bg-brand-neon text-black border-brand-neon hover:bg-white hover:border-white' 
-                    : 'bg-white text-black border-black hover:bg-black hover:text-white'}
+                    : 'bg-black text-white border-black md:bg-white md:text-black md:hover:bg-black md:hover:text-white'}
                 `}
               >
                 {plan.buttonText}
