@@ -67,16 +67,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-white border-black py-2' : 'bg-white/80 backdrop-blur-md border-transparent py-4'}`}>
-      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 md:px-8 flex justify-between items-center h-16">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-white border-black py-1 md:py-2' : 'bg-white/80 backdrop-blur-md border-transparent py-1.5 md:py-4'}`}>
+      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-4 md:px-8 flex justify-between items-center h-12 md:h-16">
         <a 
           href="/" 
           onClick={(e) => { e.preventDefault(); onNavigate('/'); }}
           className="flex items-center gap-3 cursor-pointer select-none group"
         >
           {/* LOGO ADAPTADO: PONTO MENOR E MAIS EMBAIXO */}
-          <div className="font-display font-black text-2xl tracking-tighter flex items-center gap-1">
-            ELEVVA<span className="w-2 h-2 bg-brand-neon rounded-full border border-black block translate-y-2"></span>
+          <div className="font-display font-black text-lg md:text-2xl tracking-tighter flex items-center gap-1">
+            ELEVVA<span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-brand-neon rounded-full border border-black block translate-y-1 md:translate-y-2"></span>
           </div>
         </a>
 
@@ -103,10 +103,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden text-brand-black p-2 border border-black rounded bg-brand-neon shadow-neo-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+          className="lg:hidden text-brand-black p-1.5 border border-black rounded bg-brand-neon shadow-neo-sm active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 

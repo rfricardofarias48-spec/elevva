@@ -39,7 +39,7 @@ export const ProductShowcase: React.FC = () => {
             <span className="relative inline-block text-gray-300 mt-2">
               ACHISMO.
               {/* Wavy Line Decoration */}
-              <svg className="absolute w-[105%] h-[20px] top-[55%] left-[-2.5%] -translate-y-1/2 text-brand-neon fill-none overflow-visible z-10 hidden sm:block" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <svg className="absolute w-[105%] h-[12px] sm:h-[20px] top-[55%] left-[-2.5%] -translate-y-1/2 text-brand-neon fill-none overflow-visible z-10 block" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 5 0 10 5 T 20 5 T 30 5 T 40 5 T 50 5 T 60 5 T 70 5 T 80 5 T 90 5 T 100 5" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
               </svg>
             </span>

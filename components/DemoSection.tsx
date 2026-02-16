@@ -25,7 +25,8 @@ export const DemoSection: React.FC = () => {
         </div>
 
         {/* MAIN INTERFACE IMAGE */}
-        <div className="w-full relative group">
+        {/* Aumentado width para 120% no mobile e margem negativa para expandir a imagem */}
+        <div className="w-[120%] -ml-[10%] md:w-full md:ml-0 relative group mt-10 md:mt-0">
            {/* Decorative Glow */}
            <div className="absolute -inset-0.5 bg-brand-neon rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
            

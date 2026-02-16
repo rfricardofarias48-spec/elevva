@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-white">
+    <section id="home" className="relative pt-20 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-white">
       
       {/* Background Grid Accent */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-gray/30 border-l border-black/5 hidden lg:block"></div>
@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
              </div>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl xl:text-8xl font-black text-brand-black mb-6 leading-[0.95] lg:leading-[0.9] tracking-tighter">
+          <h1 className="text-5xl sm:text-6xl xl:text-8xl font-black text-brand-black mb-8 lg:mb-6 leading-[0.95] lg:leading-[0.9] tracking-tighter">
             RECRUTE <br />
             <span className="relative inline-block px-2">
               <span className="absolute inset-0 bg-brand-neon transform -skew-x-3 -z-10 rounded-sm"></span>
@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
             E MAIS RÁPIDO.
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 font-medium max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 font-medium max-w-xl mx-auto lg:mx-0 mb-16 lg:mb-10 leading-relaxed">
             Troque a triagem manual por uma IA especialista que <span className="underline decoration-brand-neon decoration-4 underline-offset-2">lê, interpreta e ranqueia</span> currículos em segundos.
           </p>
           
@@ -80,7 +80,8 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Right Visual (Hyper-realistic Tablet - Bezel Less Style) */}
-        <div className="flex-1 w-full max-w-[1000px] relative perspective-1000">
+        {/* Aumentado width para 120% no mobile e margem negativa para expandir além do padding */}
+        <div className="flex-1 w-[120%] -ml-[10%] sm:w-full sm:ml-0 max-w-[1000px] relative perspective-1000 mt-8 lg:mt-0">
            
            {/* Tablet Chassis - Reduced outer radius for tighter fit */}
            <div className="relative mx-auto bg-[#1a1a1a] rounded-[1.5rem] p-[2px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-white/10">
