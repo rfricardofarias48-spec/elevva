@@ -20,7 +20,7 @@ export const ApplicationLinkSection: React.FC = () => {
                <Smartphone size={14} /> Mobile Friendly
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-black text-black mb-8 leading-[0.9] tracking-tighter">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-black mb-8 leading-[0.9] tracking-tighter">
               UM LINK.<br/>
               ZERO ATRITO.
             </h2>
@@ -42,7 +42,7 @@ export const ApplicationLinkSection: React.FC = () => {
                      </div>
                   </div>
                   <button className="px-4 py-2 bg-black text-white rounded-lg font-bold text-xs hover:bg-brand-neon hover:text-black transition-colors shrink-0 flex items-center gap-2">
-                     <Copy size={14} /> Copiar
+                     <Copy size={14} /> <span className="hidden sm:inline">Copiar</span>
                   </button>
                </div>
             </div>
@@ -77,7 +77,7 @@ export const ApplicationLinkSection: React.FC = () => {
              </svg>
 
              {/* PHONE MOCKUP (CSS Only) */}
-             <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-4 border-gray-800 shadow-2xl p-2 z-10 transform rotate-3 hover:rotate-0 transition-duration-500">
+             <div className="relative w-full max-w-[300px] h-[580px] md:h-[600px] bg-black rounded-[3rem] border-4 border-gray-800 shadow-2xl p-2 z-10 transform rotate-3 hover:rotate-0 transition-duration-500">
                 
                 {/* Screen */}
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative flex flex-col">

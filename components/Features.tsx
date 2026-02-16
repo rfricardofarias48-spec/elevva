@@ -45,7 +45,7 @@ export const Features: React.FC = () => {
              <div className="inline-block bg-brand-neon px-4 py-1 rounded-lg transform -skew-x-6 mb-2">
                 <span className="text-xl md:text-2xl font-black uppercase tracking-tight transform skew-x-6 inline-block">Funcionalidades</span>
              </div>
-             <h2 className="text-4xl md:text-5xl font-black tracking-tighter mt-4">
+             <h2 className="text-3xl md:text-5xl font-black tracking-tighter mt-4">
                 Potência máxima <br/>
                 para seu RH.
              </h2>
@@ -54,26 +54,26 @@ export const Features: React.FC = () => {
         </div>
 
         {/* GRID DE CARDS */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
            
            {features.map((feature, idx) => (
              <div 
                key={idx} 
                className={`
-                 relative p-10 rounded-[32px] border-2 border-black min-h-[320px] flex flex-col justify-between transition-all duration-300 hover:shadow-neo hover:-translate-y-1
+                 relative p-6 md:p-10 rounded-[32px] border-2 border-black min-h-auto md:min-h-[320px] flex flex-col justify-between transition-all duration-300 hover:shadow-neo hover:-translate-y-1
                  ${feature.variant === 'neon' ? 'bg-brand-neon' : 'bg-brand-gray'}
                `}
              >
                 {/* Icon & Title Group */}
                 <div>
                    <div className={`
-                      w-14 h-14 rounded-xl border border-black flex items-center justify-center mb-8 shadow-neo-sm
+                      w-14 h-14 rounded-xl border border-black flex items-center justify-center mb-6 md:mb-8 shadow-neo-sm
                       ${feature.variant === 'neon' ? 'bg-white' : 'bg-white'}
                    `}>
                       {feature.icon}
                    </div>
                    
-                   <h3 className="text-3xl font-bold leading-tight mb-4 tracking-tight">
+                   <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4 tracking-tight">
                      {feature.title.split(' ').map((word, i) => {
                         const isHighlight = word.includes(feature.highlight);
                         return (
@@ -87,12 +87,12 @@ export const Features: React.FC = () => {
 
                 {/* Description & Action */}
                 <div className="mt-auto">
-                   <p className={`text-lg leading-relaxed font-medium mb-8 ${feature.variant === 'neon' ? 'text-black/90' : 'text-gray-600'}`}>
+                   <p className={`text-base md:text-lg leading-relaxed font-medium mb-6 md:mb-8 ${feature.variant === 'neon' ? 'text-black/90' : 'text-gray-600'}`}>
                       {feature.desc}
                    </p>
 
                    {feature.variant === 'neon' ? (
-                      <a href="#pricing" className="bg-black text-white px-8 py-4 rounded-xl inline-flex items-center gap-2 font-bold text-base cursor-pointer hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl">
+                      <a href="#pricing" className="bg-black text-white px-8 py-4 rounded-xl inline-flex items-center gap-2 font-bold text-base cursor-pointer hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl w-full md:w-auto justify-center md:justify-start">
                          Começar Agora <ArrowRight size={20} />
                       </a>
                    ) : (

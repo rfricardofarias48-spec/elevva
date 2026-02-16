@@ -46,19 +46,19 @@ export const Pricing: React.FC = () => {
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
         
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">
+          <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">
             Planos Simples. <span className="bg-brand-neon px-2">Sem Pegadinhas.</span>
           </h2>
           <p className="text-gray-600 text-lg">Comece grátis ou escale com o plano Pro.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 items-center max-w-[1200px] mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-center max-w-[1200px] mx-auto">
           {plans.map((plan, i) => (
             <div 
               key={i}
               className={`
-                relative p-8 rounded-2xl border-2 border-black transition-transform duration-300 hover:-translate-y-2 flex flex-col h-full
-                ${plan.isPopular ? 'bg-black text-white shadow-neo-lg scale-105 z-10' : 'bg-white text-brand-black shadow-neo'}
+                relative p-6 md:p-8 rounded-2xl border-2 border-black transition-transform duration-300 hover:-translate-y-2 flex flex-col h-full
+                ${plan.isPopular ? 'bg-black text-white shadow-neo-lg scale-100 md:scale-105 z-10' : 'bg-white text-brand-black shadow-neo'}
               `}
             >
               {plan.isPopular && (

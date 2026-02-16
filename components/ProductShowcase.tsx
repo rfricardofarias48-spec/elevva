@@ -34,12 +34,12 @@ export const ProductShowcase: React.FC = () => {
           </div>
 
           {/* Headline */}
-          <h2 className="text-6xl md:text-8xl font-black text-black mb-8 leading-[0.85] tracking-tighter">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-black mb-8 leading-[0.9] tracking-tighter">
             O FIM DO <br/>
             <span className="relative inline-block text-gray-300 mt-2">
               ACHISMO.
               {/* Wavy Line Decoration */}
-              <svg className="absolute w-[105%] h-[20px] top-[55%] left-[-2.5%] -translate-y-1/2 text-brand-neon fill-none overflow-visible z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <svg className="absolute w-[105%] h-[20px] top-[55%] left-[-2.5%] -translate-y-1/2 text-brand-neon fill-none overflow-visible z-10 hidden sm:block" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 5 0 10 5 T 20 5 T 30 5 T 40 5 T 50 5 T 60 5 T 70 5 T 80 5 T 90 5 T 100 5" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
               </svg>
             </span>
@@ -54,7 +54,7 @@ export const ProductShowcase: React.FC = () => {
           <div className="grid sm:grid-cols-2 gap-6 mb-12 w-full text-left">
             
             {/* Card 1 - White */}
-            <div className="bg-white border-2 border-black p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-start h-full hover:-translate-y-1 transition-transform">
+            <div className="bg-white border-2 border-black p-6 md:p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-start h-full hover:-translate-y-1 transition-transform">
               <div className="mb-4 text-black">
                 <Zap size={32} strokeWidth={2.5} />
               </div>
@@ -65,7 +65,7 @@ export const ProductShowcase: React.FC = () => {
             </div>
 
              {/* Card 2 - Black */}
-             <div className="bg-black border-2 border-black p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(204,255,0,1)] flex flex-col items-start h-full relative overflow-hidden hover:-translate-y-1 transition-transform">
+             <div className="bg-black border-2 border-black p-6 md:p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(204,255,0,1)] flex flex-col items-start h-full relative overflow-hidden hover:-translate-y-1 transition-transform">
               <div className="mb-4 text-brand-neon">
                 <Target size={32} strokeWidth={2.5} />
               </div>

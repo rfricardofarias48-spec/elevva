@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
              </div>
           </div>
 
-          <h1 className="text-5xl sm:text-7xl xl:text-8xl font-black text-brand-black mb-6 leading-[0.9] tracking-tighter">
+          <h1 className="text-4xl sm:text-6xl xl:text-8xl font-black text-brand-black mb-6 leading-[0.95] lg:leading-[0.9] tracking-tighter">
             RECRUTE <br />
             <span className="relative inline-block px-2">
               <span className="absolute inset-0 bg-brand-neon transform -skew-x-3 -z-10 rounded-sm"></span>

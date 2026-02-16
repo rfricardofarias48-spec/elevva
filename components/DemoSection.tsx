@@ -14,7 +14,7 @@ export const DemoSection: React.FC = () => {
             <Brain size={14} className="text-brand-neon" />
             <span>Inteligência Cognitiva</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-black text-brand-black mb-6 leading-[0.9] tracking-tighter">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-brand-black mb-6 leading-[0.9] tracking-tighter">
              VEJA COMO <br/>
              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-black to-gray-500">FUNCIONA.</span>
           </h2>

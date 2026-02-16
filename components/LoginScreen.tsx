@@ -13,7 +13,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
     <div className="fixed inset-0 z-[100] bg-white">
       {/* The Bridge: Full Screen Iframe */}
       <iframe 
-        src="https://graceful-daifuku-a439d4.netlify.app/" 
+        src="https://elevva-recrutamento-com-ia-800878068774.us-west1.run.app/" 
         title="Elevva App Login"
         className="w-full h-full border-0 block"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
