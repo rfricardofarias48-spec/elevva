@@ -10,7 +10,7 @@ const plans = [
     desc: "Para testar a potência da IA.",
     features: ["25 Currículos / mês", "1 Vaga", "Exportação em PDF"],
     isPopular: false,
-    link: "/login",
+    link: "https://elevva-recrutamento-com-ia-800878068774.us-west1.run.app/",
     buttonText: "Criar Conta Grátis"
   },
   {
