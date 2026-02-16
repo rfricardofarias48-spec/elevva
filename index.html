@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevva - Recrutamento Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                neon: '#CCFF00', // O Verde da imagem
+                black: '#050505',
+                dark: '#121212',
+                gray: '#F3F4F6',
+                white: '#FFFFFF',
+                slate: '#E5E7EB'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif'],
+            },
+            boxShadow: {
+              'neo': '4px 4px 0px 0px rgba(0,0,0,1)',
+              'neo-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
+              'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+            },
+            animation: {
+              'marquee': 'marquee 25s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              marquee: {
+                "0%": { transform: "translateX(0%)" },
+                "100%": { transform: "translateX(-100%)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+      body { 
+        font-family: 'Inter', sans-serif; 
+        background-color: #FFFFFF;
+        color: #050505;
+      }
+      
+      /* Estilo de Marca-Texto (Highlight) */
+      .highlight {
+        background-color: #CCFF00;
+        padding: 0 0.2em;
+        border-radius: 4px;
+        display: inline-block;
+        transform: skewX(-2deg);
+      }
+      
+      .highlight-inverse {
+        background-color: #050505;
+        color: #CCFF00;
+        padding: 0 0.2em;
+        border-radius: 4px;
+        display: inline-block;
+      }
+
+      /* Card Hover Effect */
+      .neo-card {
+        transition: all 0.2s ease;
+        border: 1px solid #000;
+      }
+      .neo-card:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+</head>
+  <body class="antialiased">
+    <div id="root"></div>
+  </body>
+</html>
