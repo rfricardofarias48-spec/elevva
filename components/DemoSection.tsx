@@ -24,21 +24,48 @@ export const DemoSection: React.FC = () => {
           </p>
         </div>
 
-        {/* MAIN INTERFACE VIDEO */}
-        {/* Aumentado width para 120% no mobile e margem negativa ajustada para -ml-[5%] para deslocar levemente à direita */}
-        <div className="w-[120%] -ml-[5%] md:w-full md:ml-0 relative group mt-10 md:mt-0">
-           {/* Decorative Glow */}
-           <div className="absolute -inset-0.5 bg-brand-neon rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        {/* MAIN INTERFACE - TABLET STYLE */}
+        {/* Adicionado lg:w-[110%] lg:-ml-[5%] para expandir horizontalmente no desktop */}
+        <div className="w-full max-w-[1400px] lg:w-[110%] lg:-ml-[5%] mx-auto relative perspective-1000 mt-10 md:mt-0 group translate-x-4">
            
-           <div className="relative w-full aspect-video rounded-[2rem] border-2 border-black shadow-neo-lg overflow-hidden bg-gray-100">
-             <video 
-              src="https://ik.imagekit.io/xsbrdnr0y/Video%20Project%207.mp4?updatedAt=1771127198468" 
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover scale-[1.03]"
-             />
+           {/* Decorative Glow behind the tablet */}
+           <div className="absolute -inset-4 bg-brand-neon rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-700 -z-10"></div>
+           
+           {/* Tablet Chassis */}
+           <div className="relative mx-auto bg-[#1a1a1a] rounded-[1.5rem] p-[2px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-white/10">
+              
+              {/* Hardware Buttons */}
+              <div className="absolute -right-[2px] top-16 w-[3px] h-10 bg-[#2a2a2a] rounded-r-md border-l border-black/50"></div>
+              <div className="absolute -right-[2px] top-28 w-[3px] h-16 bg-[#2a2a2a] rounded-r-md border-l border-black/50"></div>
+              
+              {/* Inner Frame (Bezel) */}
+              <div className="bg-black rounded-[1.4rem] p-1.5 shadow-inner relative">
+                  
+                  {/* Screen Content */}
+                  {/* ALTERADO: lg:aspect-[2.35/1] para ser levemente mais largo que a imagem original (2.24/1) */}
+                  <div className="relative rounded-[1.1rem] overflow-hidden bg-black shadow-lg border border-white/5 aspect-[3/2] lg:aspect-[2.35/1]">
+                    
+                    {/* VIDEO - Visível apenas no Mobile (lg:hidden) */}
+                    <video 
+                      src="https://ik.imagekit.io/xsbrdnr0y/Video%20Project%207.mp4?updatedAt=1771127198468" 
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover scale-[1.03] block lg:hidden"
+                    />
+
+                    {/* IMAGEM - Visível apenas no PC/Desktop (hidden lg:block) */}
+                    <img 
+                      src="https://ik.imagekit.io/xsbrdnr0y/2tela.png?updatedAt=1771130848542"
+                      alt="Interface Desktop"
+                      className="w-full h-full object-cover scale-[1.03] hidden lg:block"
+                    />
+                    
+                    {/* Screen Reflection Glare */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none rounded-[1.1rem]"></div>
+                  </div>
+              </div>
            </div>
         </div>
 
