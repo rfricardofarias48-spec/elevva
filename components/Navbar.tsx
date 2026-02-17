@@ -71,12 +71,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               {link.label}
             </a>
           ))}
-          <button 
-            onClick={() => onNavigate('/login')}
+          <a 
+            href="https://app.elevva.net.br"
             className="bg-brand-black text-white px-6 py-2.5 rounded-lg font-bold hover:bg-brand-neon hover:text-black hover:shadow-neo transition-all border border-black text-sm cursor-pointer"
           >
             Entrar
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -101,12 +101,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               {link.label}
             </a>
           ))}
-          <button 
-            onClick={() => { setMobileMenuOpen(false); onNavigate('/login'); }}
-            className="w-full bg-brand-neon text-black border border-black py-4 rounded-xl font-bold mt-4 text-lg shadow-neo active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
+          <a 
+            href="https://app.elevva.net.br"
+            className="w-full bg-brand-neon text-black border border-black py-4 rounded-xl font-bold mt-4 text-lg shadow-neo active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer block"
           >
             Login
-          </button>
+          </a>
         </div>
       )}
     </nav>
