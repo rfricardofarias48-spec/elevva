@@ -14,7 +14,8 @@ export const ApplicationLinkSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* --- LEFT: RECRUITER FLOW (The Link) --- */}
-          <div className="flex flex-col items-start">
+          {/* Adicionado -ml-4 para puxar levemente para esquerda no mobile */}
+          <div className="flex flex-col items-start -ml-4 md:ml-0">
             
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-black text-brand-neon text-xs font-bold uppercase tracking-wider mb-6">
                <Smartphone size={14} /> Mobile Friendly

@@ -71,14 +71,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               {link.label}
             </a>
           ))}
-          <a 
-            href="https://elevva-recrutamento-com-ia-800878068774.us-west1.run.app/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button 
+            onClick={() => onNavigate('/login')}
             className="bg-brand-black text-white px-6 py-2.5 rounded-lg font-bold hover:bg-brand-neon hover:text-black hover:shadow-neo transition-all border border-black text-sm cursor-pointer"
           >
             Entrar
-          </a>
+          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -103,14 +101,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               {link.label}
             </a>
           ))}
-          <a 
-            href="https://elevva-recrutamento-com-ia-800878068774.us-west1.run.app/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button 
+            onClick={() => { setMobileMenuOpen(false); onNavigate('/login'); }}
             className="w-full bg-brand-neon text-black border border-black py-4 rounded-xl font-bold mt-4 text-lg shadow-neo active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all text-center cursor-pointer"
           >
             Login
-          </a>
+          </button>
         </div>
       )}
     </nav>

@@ -10,7 +10,7 @@ const plans = [
     desc: "Para testar a potência da IA.",
     features: ["25 Currículos / mês", "1 Vaga", "Exportação em PDF"],
     isPopular: false,
-    link: "https://elevva-recrutamento-com-ia-800878068774.us-west1.run.app/",
+    link: "/login",
     buttonText: "Criar Conta Grátis"
   },
   {
@@ -104,8 +104,15 @@ export const Pricing: React.FC = () => {
                 href={plan.link}
                 target={plan.link.startsWith('http') ? "_blank" : "_self"}
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  if(plan.link === '/login') {
+                    e.preventDefault();
+                    window.history.pushState({}, '', '/login');
+                    window.dispatchEvent(new PopStateEvent('popstate'));
+                  }
+                }}
                 className={`
-                  w-full py-4 rounded-xl font-bold border-2 transition-all text-center block
+                  w-full py-4 rounded-xl font-bold border-2 transition-all text-center block cursor-pointer
                   ${plan.isPopular 
                     ? 'bg-brand-neon text-black border-brand-neon hover:bg-white hover:border-white' 
                     : 'bg-black text-white border-black md:bg-white md:text-black md:hover:bg-black md:hover:text-white'}

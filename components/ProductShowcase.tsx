@@ -47,7 +47,7 @@ export const ProductShowcase: React.FC = () => {
           
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-800 font-bold mb-12 leading-relaxed max-w-2xl mx-auto">
-            A Elevva faz o trabalho sujo. Nossa IA lê, interpreta e classifica cada perfil. Você recebe a lista pronta de quem merece ser entrevistado.
+            A Elevva faz o trabalho pesado. Nossa IA lê, interpreta e classifica cada perfil. Você recebe a lista pronta de quem merece ser entrevistado.
           </p>
 
           {/* Feature Cards Grid */}

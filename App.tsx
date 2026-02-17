@@ -12,6 +12,7 @@ import { Footer } from './components/Footer';
 import { CookieConsent } from './components/CookieConsent';
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
 import { TermsOfUseModal } from './components/TermsOfUseModal';
+import { LoginScreen } from './components/LoginScreen';
 
 const App: React.FC = () => {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
@@ -39,6 +40,11 @@ const App: React.FC = () => {
   const openTerms = () => setIsTermsOpen(true);
   const closeTerms = () => setIsTermsOpen(false);
 
+  // ROTA DE LOGIN (REDIRECIONAMENTO)
+  if (currentPath === '/login') {
+    return <LoginScreen />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col font-sans relative bg-white text-brand-black selection:bg-brand-neon selection:text-black">
       <Navbar onNavigate={navigate} />
@@ -58,7 +64,7 @@ const App: React.FC = () => {
       <PrivacyPolicyModal isOpen={isPrivacyPolicyOpen} onClose={closePrivacyPolicy} />
       <TermsOfUseModal isOpen={isTermsOpen} onClose={closeTerms} />
 
-      {/* WhatsApp Button Style Updated */}
+      {/* WhatsApp Button */}
       <a 
         href="https://wa.me/555194396089" 
         target="_blank" 
