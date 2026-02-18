@@ -7,19 +7,19 @@ const testimonials = [
     name: "Fernanda S.",
     role: "Talent Acquisition",
     text: "O ranking já me entrega os melhores e eu só foco na entrevista. Salvou minha rotina.",
-    initial: "F"
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
   },
   {
     name: "Ricardo M.",
     role: "Diretor de RH",
     text: "Encontrou candidatos ótimos que minha equipe deixou passar por cansaço visual.",
-    initial: "R"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
   },
   {
     name: "Juliana K.",
     role: "Recrutadora Sênior",
     text: "Processo rápido e sem burocracia pra todo mundo. O link chega e o relatório já tá lá.",
-    initial: "J"
+    image: "https://images.unsplash.com/photo-1598550832205-d41fcd7504bf?auto=format&fit=crop&w=200&q=80"
   }
 ];
 
@@ -44,12 +44,12 @@ export const SocialProofSection: React.FC = () => {
               <p className="text-xl font-medium leading-relaxed mb-8">"{t.text}"</p>
               
               <div className="flex items-center gap-4">
-                 <div className="w-12 h-12 bg-black text-brand-neon rounded-full flex items-center justify-center font-bold text-xl border-2 border-black group-hover:bg-brand-neon group-hover:text-black transition-colors">
-                    {t.initial}
+                 <div className="w-14 h-14 rounded-full border-2 border-black overflow-hidden shrink-0 group-hover:border-brand-neon transition-colors">
+                    <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                  </div>
                  <div>
-                    <h4 className="font-bold">{t.name}</h4>
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">{t.role}</p>
+                    <h4 className="font-bold text-lg leading-tight">{t.name}</h4>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">{t.role}</p>
                  </div>
               </div>
             </div>

@@ -16,6 +16,12 @@ export const Hero: React.FC = () => {
     }
   };
 
+  const trustAvatars = [
+    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80", // Professional Woman
+    "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100&q=80", // Professional Man
+    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100&q=80"  // HR Professional
+  ];
+
   return (
     <section id="home" className="relative pt-20 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-white">
       
@@ -69,9 +75,9 @@ export const Hero: React.FC = () => {
           {/* Trust Badge */}
           <div className="mt-10 flex items-center justify-center lg:justify-start gap-4 opacity-80">
              <div className="flex -space-x-3">
-                {[1,2,3].map(i => (
+                {trustAvatars.map((url, i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center overflow-hidden">
-                    <img src={`https://i.pravatar.cc/100?img=${10+i}`} alt="User" />
+                    <img src={url} alt="Recrutador" className="w-full h-full object-cover" />
                   </div>
                 ))}
              </div>
