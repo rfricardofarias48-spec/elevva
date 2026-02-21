@@ -60,7 +60,7 @@ export const DemoSection: React.FC = () => {
                     <img 
                       src="https://ik.imagekit.io/xsbrdnr0y/2tela.png?updatedAt=1771130848542"
                       alt="Interface Desktop"
-                      className="w-full h-full object-cover object-top scale-100 hidden lg:block"
+                      className="w-full h-full object-cover object-top scale-[1.01] hidden lg:block"
                     />
                     
                     {/* Screen Reflection Glare */}

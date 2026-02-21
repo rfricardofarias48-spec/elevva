@@ -15,23 +15,35 @@ const plans = [
   },
   {
     name: "Mensal",
-    price: "329,90",
+    price: "289,90",
     period: "/mês",
     desc: "Tração total para seu RH.",
     features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura"],
     isPopular: false,
-    link: "https://invoice.infinitepay.io/plans/velorh/fIPbnJ9j",
+    link: "https://invoice.infinitepay.io/plans/velorh/fIPbnJ9j", // Link antigo, verificar novo
     buttonText: "Assinar Mensal"
   },
   {
-    name: "Anual",
-    price: "289,90", 
+    name: "Trimestral",
+    price: "249,90",
     period: "/mês",
-    desc: "Total de R$ 3.478,80 cobrado anualmente.",
-    features: ["Vagas Ilimitadas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura", "Atendimento Prioritário"],
+    desc: "Total de R$ 749,70 cobrado trimestralmente.",
+    features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura"],
     isPopular: true,
-    tag: "Custo Benefício",
-    link: "https://invoice.infinitepay.io/plans/velorh/3csXVcCRLP",
+    tag: "Mais Popular",
+    link: "#",
+    buttonText: "Assinar Trimestral"
+  },
+  {
+    name: "Anual",
+    price: "229,90", 
+    period: "/mês",
+    desc: "Total de R$ 2.758,80 cobrado anualmente.",
+    features: ["Vagas Ilimitadas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura", "Atendimento Prioritário"],
+    isPopular: false,
+    isBestValue: true,
+    tag: "Melhor Valor",
+    link: "https://invoice.infinitepay.io/plans/velorh/3csXVcCRLP", // Link antigo, verificar novo
     buttonText: "Assinar Anual"
   }
 ];
@@ -52,19 +64,27 @@ export const Pricing: React.FC = () => {
           <p className="text-gray-600 text-lg">Comece grátis ou escale com o plano Pro.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-center max-w-[1200px] mx-auto">
-          {plans.map((plan, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-start max-w-full mx-auto">
+          {plans.map((plan: any, i) => (
             <div 
               key={i}
               className={`
-                relative p-6 md:p-8 rounded-2xl border-2 border-black transition-transform duration-300 hover:-translate-y-2 flex flex-col h-full
-                ${plan.isPopular ? 'bg-black text-white shadow-neo-lg scale-100 md:scale-105 z-10' : 'bg-white text-brand-black shadow-neo'}
+                relative p-6 md:p-8 rounded-2xl border-2 transition-transform duration-300 hover:-translate-y-2 flex flex-col h-full
+                ${plan.isPopular 
+                  ? 'bg-black text-white border-black shadow-neo-lg scale-100 md:scale-105 z-10' 
+                  : plan.isBestValue
+                    ? 'bg-white text-brand-black border-brand-neon shadow-neo ring-1 ring-brand-neon'
+                    : 'bg-white text-brand-black border-black shadow-neo'
+                }
               `}
             >
               
-              {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-neon text-black px-4 py-1 rounded-full text-xs font-bold border border-black uppercase tracking-wider flex items-center gap-1 shadow-sm">
-                  <Star size={12} className="fill-black" /> {plan.tag || 'Recomendado'}
+              {(plan.isPopular || plan.isBestValue) && (
+                <div className={`
+                  absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold border border-black uppercase tracking-wider flex items-center gap-1 shadow-sm
+                  ${plan.isPopular ? 'bg-brand-neon text-black' : 'bg-black text-brand-neon'}
+                `}>
+                  <Star size={12} className={plan.isPopular ? "fill-black" : "fill-brand-neon"} /> {plan.tag || 'Recomendado'}
                 </div>
               )}
 
