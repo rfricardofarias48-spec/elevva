@@ -20,7 +20,7 @@ const plans = [
     desc: "Tração total para seu RH.",
     features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura"],
     isPopular: false,
-    link: "https://invoice.infinitepay.io/plans/velorh/fIPbnJ9j", // Link antigo, verificar novo
+    link: "https://pay.kiwify.com.br/x8O8Zqo",
     buttonText: "Assinar Mensal"
   },
   {
@@ -31,7 +31,7 @@ const plans = [
     features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura"],
     isPopular: true,
     tag: "Mais Popular",
-    link: "#",
+    link: "https://pay.kiwify.com.br/E3STYGy",
     buttonText: "Assinar Trimestral"
   },
   {
@@ -43,7 +43,7 @@ const plans = [
     isPopular: false,
     isBestValue: true,
     tag: "Melhor Valor",
-    link: "https://invoice.infinitepay.io/plans/velorh/3csXVcCRLP", // Link antigo, verificar novo
+    link: "https://pay.kiwify.com.br/HHT3IkF",
     buttonText: "Assinar Anual"
   }
 ];

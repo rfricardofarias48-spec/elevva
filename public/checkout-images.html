@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens para Checkout - Elevva</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+        p.subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #6b7280;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .card img, .card svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.25rem;
+            color: #111827;
+        }
+        .download-hint {
+            font-size: 0.875rem;
+            color: #6b7280;
+            background-color: #f9fafb;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 10px;
+            border: 1px solid #e5e7eb;
+        }
+        .neon-tag {
+            background-color: #CCFF00;
+            color: black;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #111827;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+        }
+        .download-btn:hover {
+            background-color: #374151;
+        }
+        .logo-container {
+            padding: 40px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeria de Imagens para Checkout</h1>
+    <p class="subtitle">Escolha a imagem que melhor se adapta ao seu checkout. Clique com o botão direito e selecione "Salvar imagem como...". <br><small>(Se as imagens não carregarem, tente recarregar a página)</small></p>
+
+    <!-- LOGO SECTION -->
+    <div class="card">
+        <div class="logo-container" id="logo-container">
+            <!-- SVG Logo - High Resolution (2000x640) -->
+            <svg width="2000" height="640" viewBox="0 0 2000 640" fill="none" xmlns="http://www.w3.org/2000/svg" id="elevva-logo" style="width: 100%; height: auto; max-width: 500px;">
+                <rect width="2000" height="640" fill="white"/>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="300" fill="black" letter-spacing="-10">
+                    ELEVVA
+                </text>
+                <circle cx="1425" cy="375" r="30" fill="#CCFF00" stroke="black" stroke-width="5"/>
+            </svg>
+        </div>
+        <div class="card-body">
+            <h2>Logo para Cabeçalho <span class="neon-tag">Ultra HD</span></h2>
+            <p style="color: #4b5563; margin-bottom: 10px;">Logo em altíssima resolução (2000px), garantindo qualidade máxima em qualquer tela.</p>
+            <button class="download-btn" onclick="downloadLogo()">Baixar Logo (PNG Alta Qualidade)</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadLogo() {
+            const svg = document.getElementById('elevva-logo');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const img = new Image();
+            
+            // Set canvas dimensions to match the high-res SVG
+            canvas.width = 2000;
+            canvas.height = 640;
+
+            const blob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(blob);
+
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0);
+                const pngUrl = canvas.toDataURL('image/png');
+                
+                const downloadLink = document.createElement('a');
+                downloadLink.href = pngUrl;
+                downloadLink.download = 'elevva-logo-checkout-hd.png';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(url);
+            };
+
+            img.src = url;
+        }
+    </script>
+
+    <div class="card">
+        <img src="https://image.pollinations.ai/prompt/abstract%20technology%20neon%20green%20black%20background%20minimalist?width=1200&height=400&nologo=true" alt="Opção 1: Tech Abstrato" referrerPolicy="no-referrer">
+        <div class="card-body">
+            <h2>Opção 1: Tech Minimalista <span class="neon-tag">Recomendado</span></h2>
+            <div class="download-hint">Ideal para um visual limpo e moderno que não distrai.</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://image.pollinations.ai/prompt/modern%20dark%20office%20workspace%20neon%20green%20accents?width=1200&height=400&nologo=true" alt="Opção 2: Escritório Moderno" referrerPolicy="no-referrer">
+        <div class="card-body">
+            <h2>Opção 2: Ambiente Corporativo</h2>
+            <div class="download-hint">Transmite profissionalismo e seriedade com um toque da marca.</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://image.pollinations.ai/prompt/artificial%20intelligence%20network%20nodes%20neon%20green%20dark?width=1200&height=400&nologo=true" alt="Opção 3: Rede Neural" referrerPolicy="no-referrer">
+        <div class="card-body">
+            <h2>Opção 3: Inteligência Artificial</h2>
+            <div class="download-hint">Foca na tecnologia de ponta e conectividade.</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://image.pollinations.ai/prompt/professional%20team%20silhouette%20dark%20background%20neon%20green%20light?width=1200&height=400&nologo=true" alt="Opção 4: Equipe de Sucesso" referrerPolicy="no-referrer">
+        <div class="card-body">
+            <h2>Opção 4: Equipe & Pessoas</h2>
+            <div class="download-hint">Humaniza a marca mostrando quem está por trás ou o resultado (contratação).</div>
+        </div>
+    </div>
+
+</body>
+</html>

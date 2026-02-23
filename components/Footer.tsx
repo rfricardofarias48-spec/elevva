@@ -65,6 +65,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenTerms }) => 
                     Preços
                   </a>
                 </li>
+                <li>
+                  <a 
+                    href="/checkout-images.html" 
+                    target="_blank"
+                    className="hover:text-brand-neon transition-colors cursor-pointer"
+                  >
+                    Imagens
+                  </a>
+                </li>
              </ul>
           </div>
 

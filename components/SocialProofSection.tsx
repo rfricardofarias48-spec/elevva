@@ -4,22 +4,22 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Fernanda S.",
-    role: "Talent Acquisition",
-    text: "O ranking já me entrega os melhores e eu só foco na entrevista. Salvou minha rotina.",
+    name: "Camila Ferreira",
+    role: "Gerente de RH",
+    text: "Reduzimos o tempo de triagem em 70%. A Elevva resolve em minutos o que levava dias.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+  },
+  {
+    name: "Roberto Almeida",
+    role: "Diretor Comercial",
+    text: "Contratamos 10 pessoas em 20 dias. O ranking automático facilitou muito a escolha.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
+  },
+  {
+    name: "Juliana Mendes",
+    role: "Analista de RH",
+    text: "Muito intuitivo. Criei a vaga, divulguei o link e os melhores candidatos apareceram no topo.",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    name: "Ricardo M.",
-    role: "Diretor de RH",
-    text: "Encontrou candidatos ótimos que minha equipe deixou passar por cansaço visual.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-  },
-  {
-    name: "Juliana K.",
-    role: "Recrutadora Sênior",
-    text: "Processo rápido e sem burocracia pra todo mundo. O link chega e o relatório já tá lá.",
-    image: "https://images.unsplash.com/photo-1598550832205-d41fcd7504bf?auto=format&fit=crop&w=200&q=80"
   }
 ];
 
