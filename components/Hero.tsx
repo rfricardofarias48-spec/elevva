@@ -100,12 +100,12 @@ export const Hero: React.FC = () => {
               <div className="bg-black rounded-[1.5rem] p-1.5 shadow-inner relative">
                   
                   {/* Screen Content - Tighter radius to match bezel */}
-                  {/* Adjusted aspect ratio to reduce vertical height slightly */}
-                  <div className="relative rounded-[1.1rem] overflow-hidden bg-black shadow-lg border border-white/5 aspect-[16/10]">
+                  {/* Adjusted aspect ratio to be slightly wider */}
+                  <div className="relative rounded-[1.1rem] overflow-hidden bg-black shadow-lg border border-white/5 aspect-[16/11]">
                     <img 
                         src="https://ik.imagekit.io/xsbrdnr0y/Captura%20de%20tela%202026-02-15%20002955.png" 
                         alt="Dashboard da Plataforma Elevva"
-                        className="w-full h-full object-cover object-left-top scale-[1.05]" 
+                        className="w-full h-full object-cover object-top scale-[1.01]" 
                     />
                     
                     {/* Screen Reflection Glare (Subtle) */}
