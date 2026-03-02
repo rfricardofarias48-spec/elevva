@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Zap, Target } from 'lucide-react';
+import { Search, CheckCircle2, BarChart3, ArrowRight } from 'lucide-react';
 
 export const ProductShowcase: React.FC = () => {
   
@@ -22,71 +22,108 @@ export const ProductShowcase: React.FC = () => {
   };
 
   return (
-    <section id="product-showcase" className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section id="showcase" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
         
-        {/* CENTERED LAYOUT - No Image */}
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
-          {/* Badge */}
-          <div className="inline-block bg-brand-neon border-2 border-black px-3 py-1.5 rounded mb-8 transform -rotate-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-             <span className="font-black text-xs md:text-sm uppercase tracking-wider text-black">Tecnologia Gemini 3</span>
-          </div>
-
-          {/* Headline */}
-          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-black mb-8 leading-[0.9] tracking-tighter">
-            O FIM DO <br/>
-            <span className="relative inline-block text-gray-300 mt-2">
-              ACHISMO.
-              {/* Wavy Line Decoration */}
-              <svg className="absolute w-[105%] h-[12px] sm:h-[20px] top-[55%] left-[-2.5%] -translate-y-1/2 text-brand-neon fill-none overflow-visible z-10 block" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 5 0 10 5 T 20 5 T 30 5 T 40 5 T 50 5 T 60 5 T 70 5 T 80 5 T 90 5 T 100 5" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
-              </svg>
-            </span>
-          </h2>
-          
-          {/* Description */}
-          <p className="text-lg md:text-xl text-gray-800 font-bold mb-12 leading-relaxed max-w-2xl mx-auto">
-            A Elevva faz o trabalho pesado. Nossa IA lê, interpreta e classifica cada perfil. Você recebe a lista pronta de quem merece ser entrevistado.
-          </p>
-
-          {/* Feature Cards Grid */}
-          <div className="grid sm:grid-cols-2 gap-6 mb-12 w-full text-left">
+          {/* Left: Content */}
+          <div className="w-full lg:w-1/2">
             
-            {/* Card 1 - White */}
-            <div className="bg-white border-2 border-black p-6 md:p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-start h-full hover:-translate-y-1 transition-transform">
-              <div className="mb-4 text-black">
-                <Zap size={32} strokeWidth={2.5} />
-              </div>
-              <h3 className="font-black text-xl uppercase tracking-tight mb-3">500 CVs / Min</h3>
-              <p className="text-sm text-gray-600 font-bold leading-relaxed">
-                Analise volumes massivos no tempo que leva para tomar um café. Escala instantânea para sua operação.
-              </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-black mb-8 leading-[1.1] tracking-tight">
+              Muito além da <br/>
+              <span className="text-gray-400">palavra-chave.</span>
+            </h2>
+            
+            <p className="text-lg text-gray-500 font-medium mb-10 leading-relaxed">
+              Você no controle. A Elevva analisa cada candidato seguindo estritamente os critérios que você definiu, indo muito além da busca por palavras-chave.
+            </p>
+
+            <div className="mb-10">
+              <a 
+                href="https://app.elevva.net.br/login" 
+                className="inline-flex px-8 py-4 bg-brand-neon text-brand-black rounded-full font-bold text-lg transition-all items-center gap-3 justify-center hover:shadow-lg hover:scale-105 active:scale-95"
+              >
+                Teste Agora
+                <ArrowRight size={20} />
+              </a>
             </div>
 
-             {/* Card 2 - Black */}
-             <div className="bg-black border-2 border-black p-6 md:p-8 rounded-2xl shadow-[6px_6px_0px_0px_rgba(204,255,0,1)] flex flex-col items-start h-full relative overflow-hidden hover:-translate-y-1 transition-transform">
-              <div className="mb-4 text-brand-neon">
-                <Target size={32} strokeWidth={2.5} />
-              </div>
-              <h3 className="font-black text-xl uppercase tracking-tight mb-3 text-white">Fit Perfeito</h3>
-              <p className="text-sm text-gray-300 font-bold leading-relaxed relative z-10">
-                Esqueça a busca por palavras-chave. A IA entende contexto, senioridade e a profundidade real das experiências.
-              </p>
-              {/* Decorative glow */}
-              <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-brand-neon blur-3xl opacity-20"></div>
+            <div className="space-y-6">
+              {[
+                { title: "Critérios Personalizados", desc: "A IA segue as regras, pesos e requisitos obrigatórios que você estipular para a vaga." },
+                { title: "Relatórios Detalhados", desc: "Não entregamos apenas um ranking. Você recebe um dossiê completo individual e coletivo dos candidatos." },
+                { title: "Contexto Semântico", desc: "Entende que 'Liderar equipe' e 'Gestão de pessoas' são similares." }
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center flex-shrink-0 border border-gray-100 text-brand-neon">
+                    <CheckCircle2 size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-brand-black text-lg">{item.title}</h4>
+                    <p className="text-gray-500 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-
           </div>
 
-          {/* CTA Button */}
-          <a 
-            href="#pricing" 
-            onClick={(e) => scrollToSection(e, '#pricing')}
-            className="w-full md:w-auto px-12 bg-brand-neon text-black font-black text-lg py-5 rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all uppercase tracking-wide text-center"
-          >
-            Testar Gratuitamente
-          </a>
+          {/* Right: Visual Representation */}
+          <div className="w-full lg:w-1/2 relative">
+             <div className="relative bg-brand-black rounded-[2.5rem] p-8 md:p-12 shadow-2xl overflow-hidden">
+                {/* Background Grid */}
+                <div className="absolute inset-0 opacity-20" 
+                     style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '24px 24px' }}>
+                </div>
+                
+                {/* Floating Card - Candidate Score */}
+                <div className="relative z-10 bg-white rounded-2xl p-6 shadow-xl mb-6 transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+                   <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-3">
+                         <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?img=32" alt="Candidate" className="w-full h-full object-cover" />
+                         </div>
+                         <div>
+                            <h4 className="font-bold text-brand-black">Mariana Silva</h4>
+                            <p className="text-xs text-gray-500">Senior Product Designer</p>
+                         </div>
+                      </div>
+                      <div className="text-right">
+                         <div className="text-3xl font-black text-brand-neon">98%</div>
+                         <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Match Score</div>
+                      </div>
+                   </div>
+                   
+                   <div className="space-y-2">
+                      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                         <div className="h-full bg-brand-neon w-[98%]"></div>
+                      </div>
+                      <div className="flex justify-between text-xs font-medium text-gray-500">
+                         <span>Experiência: 8 anos</span>
+                         <span>Gestão: 3 anos</span>
+                      </div>
+                   </div>
+                </div>
+
+                {/* Floating Card - Skills */}
+                <div className="relative z-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl transform translate-x-4">
+                   <h5 className="text-white font-bold mb-4 flex items-center gap-2">
+                      <BarChart3 size={18} className="text-brand-neon" /> Análise de Skills
+                   </h5>
+                   <div className="flex flex-wrap gap-2">
+                      {['Figma', 'Design System', 'Prototipagem', 'React', 'Liderança'].map(skill => (
+                         <span key={skill} className="px-3 py-1 rounded-full bg-white/10 text-white text-xs border border-white/10">
+                            {skill}
+                         </span>
+                      ))}
+                   </div>
+                </div>
+
+             </div>
+             
+             {/* Decorative Elements */}
+             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-neon rounded-full blur-[80px] opacity-50 pointer-events-none"></div>
+          </div>
 
         </div>
       </div>

@@ -1,34 +1,25 @@
 import React from 'react';
-import { Brain } from 'lucide-react';
+import { Brain, ArrowRight } from 'lucide-react';
 
 export const DemoSection: React.FC = () => {
   return (
-    <section id="demo" className="py-16 bg-white relative overflow-hidden border-t-2 border-black">
+    <section id="demo" className="py-16 lg:py-24 bg-white relative overflow-hidden border-t border-gray-100">
       
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black text-white text-xs font-bold uppercase tracking-widest mb-6">
-            <Brain size={14} className="text-brand-neon" />
-            <span>Inteligência Cognitiva</span>
-          </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-brand-black mb-6 leading-[0.9] tracking-tighter">
-             VEJA COMO <br/>
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-black to-gray-500">FUNCIONA.</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-brand-black mb-6 leading-[1.1] tracking-tight">
+             Relatório <span className="text-gray-400">Detalhado.</span>
           </h2>
-          <p className="text-lg font-medium text-gray-600 leading-relaxed">
-             Esqueça a leitura dinâmica. A Elevva quebra cada currículo em centenas de pontos de dados, 
-             comparando tecnicamente com a vaga para eliminar o viés inconsciente.
+          <p className="text-lg md:text-xl font-medium text-gray-500 leading-relaxed">
+             Nossa tecnologia analisa centenas de pontos de dados em cada currículo, comparando competências reais com as necessidades da sua vaga.
           </p>
         </div>
 
         {/* MAIN INTERFACE - TABLET STYLE */}
         {/* Aumentado max-w para lg:max-w-[1200px] no desktop para ficar ainda mais largo */}
         <div className="w-[120%] -ml-[10%] sm:w-full sm:mx-auto max-w-[1000px] lg:max-w-[1200px] relative perspective-1000 mt-10 md:mt-0 group">
-           
-           {/* Decorative Glow behind the tablet */}
-           <div className="absolute -inset-4 bg-brand-neon rounded-[2.5rem] blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-700 -z-10"></div>
            
            {/* Tablet Chassis */}
            <div className="relative mx-auto bg-[#1a1a1a] rounded-[1.5rem] p-[2px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-white/10">

@@ -49,8 +49,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenTerms }) => 
              <ul className="space-y-4 text-gray-400">
                 <li>
                   <a 
-                    href="#standards" 
-                    onClick={(e) => scrollToSection(e, 'standards')}
+                    href="#features" 
+                    onClick={(e) => scrollToSection(e, 'features')}
                     className="hover:text-brand-neon transition-colors cursor-pointer"
                   >
                     Funcionalidades
@@ -63,15 +63,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenTerms }) => 
                     className="hover:text-brand-neon transition-colors cursor-pointer"
                   >
                     Preços
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="/checkout-images.html" 
-                    target="_blank"
-                    className="hover:text-brand-neon transition-colors cursor-pointer"
-                  >
-                    Imagens
                   </a>
                 </li>
              </ul>

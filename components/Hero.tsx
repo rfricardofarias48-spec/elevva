@@ -1,8 +1,9 @@
 
-import React from 'react';
-import { ArrowRight, Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Star, Lock, Sparkles } from 'lucide-react';
 
 export const Hero: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -16,107 +17,122 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const trustAvatars = [
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80", // Professional Woman
-    "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100&q=80", // Professional Man
-    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100&q=80"  // HR Professional
+  const tabs = [
+    "Triagem de Currículos",
+    "Ranking Automático",
+    "Análise de Perfil",
+    "Exportação em PDF"
   ];
 
   return (
-    <section id="home" className="relative pt-20 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-white">
+    <section id="home" className="relative pt-32 pb-8 lg:pt-40 lg:pb-12 overflow-hidden bg-transparent">
       
-      {/* Background Grid Accent */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-gray/30 border-l border-black/5 hidden lg:block"></div>
-
-      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
         
-        {/* Left Content */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex flex-col items-center gap-6 lg:gap-8">
           
-          <div className="inline-block mb-6 animate-float">
-             <div className="bg-brand-neon border border-black px-4 py-1.5 rounded-full shadow-neo-sm flex items-center gap-2">
-                <Star size={14} className="fill-black" />
-                <span className="text-xs font-bold uppercase tracking-wider">IA Generativa v2.5</span>
-             </div>
+          {/* Centered Content */}
+          <div className="w-full max-w-4xl text-center flex flex-col items-center">
+            
+            <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-brand-black mb-6 leading-[1.05] tracking-tight">
+              Recrute melhor <br />
+              <span className="text-brand-neon">E mais rápido</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mb-4 leading-relaxed">
+              Você define os critérios, a Elevva encontra o candidato perfeito. Infraestrutura completa para seu RH.
+            </p>
+            
+            <div className="mt-4 flex items-center gap-4 text-sm font-medium text-gray-500 justify-center">
+               <div className="flex -space-x-2">
+                  {[
+                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&q=80",
+                    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&q=80",
+                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&q=80",
+                    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&q=80"
+                  ].map((src, i) => (
+                    <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-[10px] font-bold overflow-hidden">
+                       <img src={src} alt="User" className="w-full h-full object-cover" />
+                    </div>
+                  ))}
+               </div>
+               <p>Escolhido por + 150 Recrutadores</p>
+            </div>
+
           </div>
+        </div>
+      </div>
 
-          <h1 className="text-5xl sm:text-6xl xl:text-8xl font-black text-brand-black mb-8 lg:mb-6 leading-[0.95] lg:leading-[0.9] tracking-tighter">
-            RECRUTE <br />
-            <span className="relative inline-block px-2">
-              <span className="absolute inset-0 bg-brand-neon transform -skew-x-3 -z-10 rounded-sm"></span>
-              MELHOR
-            </span> <br />
-            E MAIS RÁPIDO.
-          </h1>
+      {/* Infinite Marquee */}
+      <div className="w-full overflow-hidden bg-white border-y border-gray-100 py-6 my-6 flex relative z-10">
+        <div className="animate-marquee whitespace-nowrap flex flex-shrink-0 items-center">
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Built for high performance recruiting</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Powered by Advanced AI</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Data Driven Decisions</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Eliminate Bias</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+        </div>
+        <div className="animate-marquee whitespace-nowrap flex flex-shrink-0 items-center">
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Built for high performance recruiting</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Powered by Advanced AI</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Data Driven Decisions</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">Eliminate Bias</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-200 mx-8 uppercase tracking-tighter">•</span>
+        </div>
+      </div>
 
-          <p className="text-lg md:text-xl text-gray-600 font-medium max-w-xl mx-auto lg:mx-0 mb-16 lg:mb-10 leading-relaxed">
-            Troque a triagem manual por uma IA especialista que <span className="underline decoration-brand-neon decoration-4 underline-offset-2">lê, interpreta e ranqueia</span> currículos em segundos.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-            <a 
-              href="#pricing" 
-              onClick={(e) => scrollToSection(e, '#pricing')}
-              className="px-8 py-4 bg-brand-black text-white rounded-lg font-bold text-lg border border-black shadow-neo hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center gap-3 w-full sm:w-auto justify-center"
-            >
-              Começar Agora
-              <ArrowRight size={20} />
-            </a>
+      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10 pt-12 pb-6 lg:pt-24 lg:pb-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
+
+          {/* Left Side: Title & Button */}
+          <div className="w-full lg:w-[30%] text-center lg:text-left">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-black tracking-tight mb-8 leading-tight">
+              Simples. <br />
+              Intuitivo. <br />
+              <span className="text-brand-neon">Inteligente.</span>
+            </h2>
             
             <a 
-              href="#demo"
-              onClick={(e) => scrollToSection(e, '#demo')}
-              className="px-8 py-4 bg-white text-brand-black rounded-lg font-bold text-lg border border-black shadow-neo-sm hover:bg-gray-50 transition-all w-full sm:w-auto flex items-center justify-center"
+              href="https://app.elevva.net.br/register" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-lg transition-all hover:bg-gray-800 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
             >
-              Ver Demo
+              Teste Grátis
+              <ArrowRight size={20} className="ml-2" />
             </a>
           </div>
 
-          {/* Trust Badge */}
-          <div className="mt-10 flex items-center justify-center lg:justify-start gap-4 opacity-80">
-             <div className="flex -space-x-3">
-                {trustAvatars.map((url, i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center overflow-hidden">
-                    <img src={url} alt="Recrutador" className="w-full h-full object-cover" />
-                  </div>
-                ))}
+          {/* Right Side: Image */}
+          <div className="w-full lg:w-[70%] relative">
+             <div className="relative mx-auto bg-white rounded-[1.5rem] md:rounded-[2rem] p-1.5 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] ring-1 ring-black/5">
+                <div className="bg-white rounded-[1rem] md:rounded-[1.5rem] overflow-hidden relative border border-gray-100 shadow-inner">
+                    <div className="relative aspect-[16/9] bg-white overflow-hidden p-1 md:p-2">
+                      <img 
+                        src="https://ik.imagekit.io/xsbrdnr0y/2tela.png" 
+                        alt="Elevva Interface"
+                        className="w-full h-full object-contain object-top"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-white/5 pointer-events-none"></div>
+                    </div>
+                </div>
              </div>
-             <p className="text-sm font-semibold text-gray-500">+150 Recrutadores usam</p>
+             
+             {/* Decorative Elements */}
+             <div className="absolute -top-16 -right-16 w-80 h-80 bg-brand-neon/10 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
+             <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-blue-200/5 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
           </div>
-        </div>
-
-        {/* Right Visual (Hyper-realistic Tablet - Bezel Less Style) */}
-        {/* ALTERADO: de ml-[5%] para -ml-[5%] no mobile para ajustar levemente a esquerda */}
-        <div className="flex-1 w-[120%] -ml-[5%] sm:w-full sm:ml-0 max-w-[1000px] relative perspective-1000 mt-8 lg:mt-0">
-           
-           {/* Tablet Chassis - Reduced outer radius for tighter fit */}
-           <div className="relative mx-auto bg-[#1a1a1a] rounded-[1.5rem] p-[2px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-white/10">
-              
-              {/* Hardware Buttons (Volume/Power simulation) */}
-              <div className="absolute -right-[2px] top-16 w-[3px] h-10 bg-[#2a2a2a] rounded-r-md border-l border-black/50"></div>
-              <div className="absolute -right-[2px] top-28 w-[3px] h-16 bg-[#2a2a2a] rounded-r-md border-l border-black/50"></div>
-              
-              {/* Inner Frame (The Bezel) - Minimal padding (p-1.5) */}
-              <div className="bg-black rounded-[1.5rem] p-1.5 shadow-inner relative">
-                  
-                  {/* Screen Content - Tighter radius to match bezel */}
-                  {/* Adjusted aspect ratio to be slightly wider */}
-                  <div className="relative rounded-[1.1rem] overflow-hidden bg-black shadow-lg border border-white/5 aspect-[16/11]">
-                    <img 
-                        src="https://ik.imagekit.io/xsbrdnr0y/Captura%20de%20tela%202026-02-15%20002955.png" 
-                        alt="Dashboard da Plataforma Elevva"
-                        className="w-full h-full object-cover object-top scale-[1.01]" 
-                    />
-                    
-                    {/* Screen Reflection Glare (Subtle) */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none rounded-[1.1rem]"></div>
-                  </div>
-              </div>
-           </div>
 
         </div>
-
       </div>
+
+
+
     </section>
   );
 };

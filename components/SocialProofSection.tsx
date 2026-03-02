@@ -1,55 +1,62 @@
 
 import React from 'react';
-import { Quote } from 'lucide-react';
+import { Quote, Sparkles } from 'lucide-react';
 
 const testimonials = [
   {
     name: "Camila Ferreira",
     role: "Gerente de RH",
     text: "Reduzimos o tempo de triagem em 70%. A Elevva resolve em minutos o que levava dias.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80"
   },
   {
     name: "Roberto Almeida",
     role: "Diretor Comercial",
     text: "Contratamos 10 pessoas em 20 dias. O ranking automático facilitou muito a escolha.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80"
   },
   {
     name: "Juliana Mendes",
     role: "Analista de RH",
     text: "Muito intuitivo. Criei a vaga, divulguei o link e os melhores candidatos apareceram no topo.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+    image: "https://images.unsplash.com/photo-1598550874175-4d7112ee7f38?auto=format&fit=crop&w=200&q=80"
   }
 ];
 
 export const SocialProofSection: React.FC = () => {
   return (
-    <section className="py-12 border-b border-gray-100 bg-white">
-      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6">
+    <section id="social-proof" className="pt-8 pb-16 lg:pt-12 lg:pb-24 bg-transparent relative overflow-hidden">
+      
+      <div className="max-w-[95%] 2xl:max-w-[1200px] mx-auto px-6 relative z-10">
         
-        {/* Marquee Simples */}
-        <div className="mb-10 overflow-hidden">
-           <div className="flex gap-16 animate-marquee whitespace-nowrap opacity-40 grayscale">
-              {Array(10).fill("TRUSTED BY INNOVATORS").map((txt, i) => (
-                 <span key={i} className="text-4xl font-black italic tracking-tighter text-gray-300 select-none">{txt}</span>
-              ))}
-           </div>
+        {/* HEADER SECTION */}
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-brand-black mb-6 leading-[1.1]">
+            Quem usa, <br className="hidden md:block"/>
+            <span className="text-gray-400">recomenda.</span>
+          </h2>
+          
+          <p className="text-lg text-gray-500 font-medium leading-relaxed">
+            Junte-se a centenas de recrutadores que já transformaram suas operações com a Elevva.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-gray-50 border-2 border-transparent hover:border-black p-8 rounded-2xl transition-all duration-300 hover:shadow-neo group">
-              <Quote className="text-brand-neon fill-black mb-6" size={40} />
-              <p className="text-xl font-medium leading-relaxed mb-8">"{t.text}"</p>
+            <div key={i} className="bg-white border border-gray-100 p-8 md:p-10 rounded-[2rem] shadow-xl shadow-gray-200/50 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gray-200/80 group">
+              <div>
+                <Quote className="text-brand-neon fill-brand-neon/20 mb-6" size={32} />
+                <p className="text-lg text-gray-600 font-medium leading-relaxed mb-8">"{t.text}"</p>
+              </div>
               
-              <div className="flex items-center gap-4">
-                 <div className="w-14 h-14 rounded-full border-2 border-black overflow-hidden shrink-0 group-hover:border-brand-neon transition-colors">
+              <div className="flex items-center gap-4 mt-auto">
+                 <div className="w-12 h-12 rounded-full border-2 border-white shadow-md overflow-hidden shrink-0 group-hover:border-brand-neon transition-colors">
                     <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                  </div>
                  <div>
-                    <h4 className="font-bold text-lg leading-tight">{t.name}</h4>
-                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">{t.role}</p>
+                    <h4 className="font-bold text-brand-black leading-tight">{t.name}</h4>
+                    <p className="text-xs font-medium text-gray-500">{t.role}</p>
                  </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, Star, Zap } from 'lucide-react';
+import { Check, Star, Zap, Sparkles } from 'lucide-react';
 
 const plans = [
   {
@@ -15,107 +15,115 @@ const plans = [
   },
   {
     name: "Mensal",
-    price: "289,90",
+    price: "129,90",
     period: "/mês",
     desc: "Tração total para seu RH.",
-    features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura"],
+    features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF"],
     isPopular: false,
-    link: "https://pay.kiwify.com.br/x8O8Zqo",
+    link: "https://invoice.infinitepay.io/plans/velorh/fIPbnJ9j",
     buttonText: "Assinar Mensal"
   },
   {
     name: "Trimestral",
-    price: "249,90",
+    price: "119,90",
     period: "/mês",
-    desc: "Total de R$ 749,70 cobrado trimestralmente.",
-    features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura"],
+    desc: "Total de R$ 359,70 cobrado trimestralmente.",
+    features: ["3 Vagas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF"],
     isPopular: true,
     tag: "Mais Popular",
-    link: "https://pay.kiwify.com.br/E3STYGy",
+    link: "https://invoice.infinitepay.io/plans/velorh/1p1tYQnp1",
     buttonText: "Assinar Trimestral"
   },
   {
     name: "Anual",
-    price: "229,90", 
+    price: "99,90", 
     period: "/mês",
-    desc: "Total de R$ 2.758,80 cobrado anualmente.",
-    features: ["Vagas Ilimitadas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Link de Candidatura", "Atendimento Prioritário"],
+    desc: "Total de R$ 1.198,80 cobrado anualmente.",
+    features: ["Vagas Ilimitadas", "Análise Ilimitada de Currículos", "Ranking Automático", "Exportação em PDF", "Atendimento Prioritário"],
     isPopular: false,
     isBestValue: true,
     tag: "Melhor Valor",
-    link: "https://pay.kiwify.com.br/HHT3IkF",
+    link: "https://invoice.infinitepay.io/plans/velorh/3csXVcCRLP",
     buttonText: "Assinar Anual"
   }
 ];
 
 export const Pricing: React.FC = () => {
   return (
-    <section id="pricing" className="py-16 bg-brand-gray relative overflow-hidden">
+    <section id="pricing" className="py-16 lg:py-24 bg-transparent relative overflow-hidden">
       
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:20px_20px]"></div>
-
-      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
+      <div className="max-w-[95%] 2xl:max-w-[1200px] mx-auto px-6 relative z-10">
         
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">
-            Planos Simples. <span className="bg-brand-neon px-2">Sem Pegadinhas.</span>
+        {/* HEADER SECTION */}
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-brand-black mb-6 leading-[1.1]">
+            Planos simples. <br className="hidden md:block"/>
+            <span className="text-gray-400">Sem pegadinhas.</span>
           </h2>
-          <p className="text-gray-600 text-lg">Comece grátis ou escale com o plano Pro.</p>
+          
+          <p className="text-lg text-gray-500 font-medium leading-relaxed">
+            Comece grátis ou escale com o plano Pro.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-start max-w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 items-start max-w-full mx-auto">
           {plans.map((plan: any, i) => (
             <div 
               key={i}
               className={`
-                relative p-6 md:p-8 rounded-2xl border-2 transition-transform duration-300 hover:-translate-y-2 flex flex-col h-full
+                relative p-8 md:p-10 rounded-[2rem] transition-all duration-500 hover:-translate-y-2 flex flex-col h-full
                 ${plan.isPopular 
-                  ? 'bg-black text-white border-black shadow-neo-lg scale-100 md:scale-105 z-10' 
+                  ? 'bg-brand-black text-white shadow-2xl ring-1 ring-white/10 scale-100 md:scale-105 z-10' 
                   : plan.isBestValue
-                    ? 'bg-white text-brand-black border-brand-neon shadow-neo ring-1 ring-brand-neon'
-                    : 'bg-white text-brand-black border-black shadow-neo'
+                    ? 'bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-brand-neon ring-1 ring-brand-neon/50'
+                    : 'bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/80'
                 }
               `}
             >
               
+              {/* Decorative Glow for Popular Plan */}
+              {plan.isPopular && (
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-neon/20 blur-3xl rounded-full pointer-events-none"></div>
+              )}
+
               {(plan.isPopular || plan.isBestValue) && (
                 <div className={`
-                  absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold border border-black uppercase tracking-wider flex items-center gap-1 shadow-sm
-                  ${plan.isPopular ? 'bg-brand-neon text-black' : 'bg-black text-brand-neon'}
+                  absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-md
+                  ${plan.isPopular ? 'bg-brand-neon text-black' : 'bg-brand-black text-brand-neon'}
                 `}>
                   <Star size={12} className={plan.isPopular ? "fill-black" : "fill-brand-neon"} /> {plan.tag || 'Recomendado'}
                 </div>
               )}
 
               {plan.name === "Grátis" && (
-                 <div className="absolute -top-3 left-8 bg-brand-neon text-black px-3 py-1 rounded text-[10px] font-bold border border-black uppercase tracking-wider shadow-sm z-20">
+                 <div className="absolute -top-3 left-8 bg-brand-neon text-black px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider shadow-sm z-20">
                     Experimente
                  </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-2 flex items-center gap-2 mt-2">
+              <h3 className="text-2xl font-bold mb-2 flex items-center gap-2 mt-2 relative z-10">
                 {plan.name}
-                {plan.name !== "Grátis" && <Zap size={20} className={plan.isPopular ? "text-brand-neon fill-brand-neon" : "text-black fill-brand-neon"} />}
+                {plan.name !== "Grátis" && <Zap size={20} className={plan.isPopular ? "text-brand-neon fill-brand-neon" : "text-gray-400 fill-gray-400"} />}
               </h3>
-              <p className={`text-sm mb-6 ${plan.isPopular ? 'text-gray-400' : 'text-gray-500'}`}>{plan.desc}</p>
+              <p className={`text-sm mb-8 font-medium relative z-10 ${plan.isPopular ? 'text-gray-400' : 'text-gray-500'}`}>{plan.desc}</p>
               
-              <div className="mb-8 pb-8 border-b border-dashed border-current border-opacity-20">
+              <div className="mb-8 pb-8 border-b border-gray-200/20 relative z-10">
                  <div className="flex items-baseline">
                    <span className="text-sm font-bold mr-1">R$</span>
-                   <span className="text-5xl font-black tracking-tighter">{plan.price.split(',')[0]}</span>
+                   <span className="text-5xl font-black tracking-tight">{plan.price.split(',')[0]}</span>
                    <span className="text-2xl font-bold">,{plan.price.split(',')[1]}</span>
-                   <span className={`ml-1 text-xs uppercase font-bold tracking-wide ${plan.isPopular ? 'text-gray-400' : 'text-gray-500'}`}>{plan.period}</span>
+                   <span className={`ml-1 text-xs uppercase font-bold tracking-wide ${plan.isPopular ? 'text-gray-500' : 'text-gray-400'}`}>{plan.period}</span>
                  </div>
               </div>
 
-              <ul className="space-y-4 mb-8 flex-1">
+              <ul className="space-y-4 mb-10 flex-1 relative z-10">
                  {plan.features.map((feat, idx) => (
                    <li key={idx} className="flex items-center gap-3 text-sm font-medium">
-                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 border border-black ${plan.isPopular ? 'bg-brand-neon text-black border-none' : 'bg-brand-neon text-black'}`}>
-                       <Check size={12} strokeWidth={4} />
+                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${plan.isPopular ? 'bg-brand-neon/20 text-brand-neon' : 'bg-gray-100 text-brand-black'}`}>
+                       <Check size={12} strokeWidth={3} />
                      </div>
-                     {feat}
+                     <span className={plan.isPopular ? 'text-gray-300' : 'text-gray-600'}>{feat}</span>
                    </li>
                  ))}
               </ul>
@@ -132,10 +140,10 @@ export const Pricing: React.FC = () => {
                   }
                 }}
                 className={`
-                  w-full py-4 rounded-xl font-bold border-2 transition-all text-center block cursor-pointer
+                  w-full py-4 rounded-xl font-bold transition-all text-center block cursor-pointer relative z-10
                   ${plan.isPopular 
-                    ? 'bg-brand-neon text-black border-brand-neon hover:bg-white hover:border-white' 
-                    : 'bg-black text-white border-black md:bg-white md:text-black md:hover:bg-black md:hover:text-white'}
+                    ? 'bg-brand-neon text-black hover:bg-[#b3e600]' 
+                    : 'bg-gray-50 text-brand-black border border-gray-200 hover:bg-brand-black hover:text-white hover:border-brand-black'}
                 `}
               >
                 {plan.buttonText}
