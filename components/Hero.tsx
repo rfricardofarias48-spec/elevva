@@ -34,13 +34,13 @@ export const Hero: React.FC = () => {
           {/* Centered Content */}
           <div className="w-full max-w-4xl text-center flex flex-col items-center">
             
-            <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-brand-black mb-6 leading-[1.05] tracking-tight">
+            <h1 className="text-[11.5vw] sm:text-7xl md:text-8xl font-bold text-brand-black mb-6 leading-[1.05] tracking-tight max-sm:whitespace-nowrap">
               Recrute melhor <br />
               <span className="text-brand-neon">E mais rápido</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mb-4 leading-relaxed">
-              Você define os critérios, a Elevva encontra o candidato perfeito. Infraestrutura completa para seu RH.
+              Você define os critérios, a Elevva encontra o candidato perfeito. <span className="hidden sm:inline">Infraestrutura completa para seu RH.</span>
             </p>
             
             <div className="mt-4 flex items-center gap-4 text-sm font-medium text-gray-500 justify-center">
@@ -56,7 +56,8 @@ export const Hero: React.FC = () => {
                     </div>
                   ))}
                </div>
-               <p>Escolhido por + 150 Recrutadores</p>
+               <p className="hidden sm:block">Escolhido por + 150 Recrutadores</p>
+               <p className="sm:hidden">+ 150 Recrutadores</p>
             </div>
 
           </div>
@@ -89,8 +90,8 @@ export const Hero: React.FC = () => {
 
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10 pt-12 pb-6 lg:pt-24 lg:pb-12">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
-
-          {/* Left Side: Title & Button */}
+          
+          {/* Left Side: Title (Mobile) / Title & Button (Desktop) */}
           <div className="w-full lg:w-[30%] text-center lg:text-left">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-black tracking-tight mb-8 leading-tight">
               Simples. <br />
@@ -98,9 +99,10 @@ export const Hero: React.FC = () => {
               <span className="text-brand-neon">Inteligente.</span>
             </h2>
             
+            {/* Botão visível apenas no Desktop */}
             <a 
               href="https://app.elevva.net.br/register" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-lg transition-all hover:bg-gray-800 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+              className="hidden lg:inline-flex items-center justify-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-lg transition-all hover:bg-gray-800 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
             >
               Teste Grátis
               <ArrowRight size={20} className="ml-2" />
@@ -108,14 +110,14 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Right Side: Image */}
-          <div className="w-full lg:w-[70%] relative">
+          <div className="w-[120%] -ml-[2%] sm:w-full sm:ml-0 lg:w-[70%] relative mt-0 lg:mt-0">
              <div className="relative mx-auto bg-white rounded-[1.5rem] md:rounded-[2rem] p-1.5 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] ring-1 ring-black/5">
                 <div className="bg-white rounded-[1rem] md:rounded-[1.5rem] overflow-hidden relative border border-gray-100 shadow-inner">
                     <div className="relative aspect-[16/9] bg-white overflow-hidden p-1 md:p-2">
                       <img 
                         src="https://ik.imagekit.io/xsbrdnr0y/2tela.png" 
                         alt="Elevva Interface"
-                        className="w-full h-full object-contain object-top"
+                        className="w-full h-full object-contain object-center scale-[1.05]"
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-white/5 pointer-events-none"></div>
@@ -126,6 +128,17 @@ export const Hero: React.FC = () => {
              {/* Decorative Elements */}
              <div className="absolute -top-16 -right-16 w-80 h-80 bg-brand-neon/10 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
              <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-blue-200/5 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
+          </div>
+
+          {/* Botão visível apenas no Mobile (abaixo da imagem) */}
+          <div className="w-full text-center mt-4 lg:hidden">
+            <a 
+              href="https://app.elevva.net.br/register" 
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-lg transition-all hover:bg-gray-800 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+            >
+              Teste Grátis
+              <ArrowRight size={20} className="ml-2" />
+            </a>
           </div>
 
         </div>

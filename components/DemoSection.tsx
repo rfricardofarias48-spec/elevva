@@ -3,7 +3,7 @@ import { Brain, ArrowRight } from 'lucide-react';
 
 export const DemoSection: React.FC = () => {
   return (
-    <section id="demo" className="py-16 lg:py-24 bg-white relative overflow-hidden border-t border-gray-100">
+    <section id="demo" className="py-12 lg:py-24 bg-white relative overflow-hidden border-t border-gray-100">
       
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
 
@@ -35,14 +35,11 @@ export const DemoSection: React.FC = () => {
                   {/* Ajustado: lg:aspect-[2.1/1] para diminuir a altura vertical da tela */}
                   <div className="relative rounded-[1.1rem] overflow-hidden bg-white shadow-lg border border-white/5 aspect-[3/2] lg:aspect-[2.1/1]">
                     
-                    {/* VIDEO - Visível apenas no Mobile (lg:hidden) */}
-                    <video 
-                      src="https://ik.imagekit.io/xsbrdnr0y/Video%20Project%207.mp4?updatedAt=1771127198468" 
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-cover object-center scale-[1.03] block lg:hidden"
+                    {/* IMAGEM - Visível apenas no Mobile (lg:hidden) */}
+                    <img 
+                      src="https://ik.imagekit.io/xsbrdnr0y/imagem%20detalhe.png" 
+                      alt="Interface Mobile"
+                      className="w-full h-full object-contain object-center bg-white block lg:hidden"
                     />
 
                     {/* IMAGEM - Visível apenas no PC/Desktop (hidden lg:block) */}

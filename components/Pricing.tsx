@@ -76,8 +76,8 @@ export const Pricing: React.FC = () => {
                 ${plan.isPopular 
                   ? 'bg-brand-black text-white shadow-2xl ring-1 ring-white/10 scale-100 md:scale-105 z-10' 
                   : plan.isBestValue
-                    ? 'bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-brand-neon ring-1 ring-brand-neon/50'
-                    : 'bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/80'
+                    ? 'bg-gray-50 md:bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-brand-neon ring-1 ring-brand-neon/50'
+                    : 'bg-gray-50 md:bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/80'
                 }
               `}
             >
@@ -143,7 +143,7 @@ export const Pricing: React.FC = () => {
                   w-full py-4 rounded-xl font-bold transition-all text-center block cursor-pointer relative z-10
                   ${plan.isPopular 
                     ? 'bg-brand-neon text-black hover:bg-[#b3e600]' 
-                    : 'bg-gray-50 text-brand-black border border-gray-200 hover:bg-brand-black hover:text-white hover:border-brand-black'}
+                    : 'bg-brand-black text-white hover:bg-gray-800'}
                 `}
               >
                 {plan.buttonText}
