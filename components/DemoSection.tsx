@@ -33,13 +33,14 @@ export const DemoSection: React.FC = () => {
                   
                   {/* Screen Content */}
                   {/* Ajustado: lg:aspect-[2.1/1] para diminuir a altura vertical da tela */}
-                  <div className="relative rounded-[1.1rem] overflow-hidden bg-white shadow-lg border border-white/5 aspect-[3/2] lg:aspect-[2.1/1]">
+                  <div className="relative rounded-[1.1rem] overflow-hidden bg-white shadow-lg border border-white/5 aspect-[1.75/1] lg:aspect-[2.1/1]">
                     
                     {/* IMAGEM - Visível apenas no Mobile (lg:hidden) */}
                     <img 
-                      src="https://ik.imagekit.io/xsbrdnr0y/imagem%20detalhe.png" 
+                      src="https://ik.imagekit.io/xsbrdnr0y/imagem%20detalhe.png?v=1" 
                       alt="Interface Mobile"
-                      className="w-full h-full object-contain object-center bg-white block lg:hidden"
+                      className="w-full h-full object-contain object-center bg-white block lg:hidden scale-[1.05]"
+                      referrerPolicy="no-referrer"
                     />
 
                     {/* IMAGEM - Visível apenas no PC/Desktop (hidden lg:block) */}

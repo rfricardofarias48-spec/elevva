@@ -76,8 +76,8 @@ export const Pricing: React.FC = () => {
                 ${plan.isPopular 
                   ? 'bg-brand-black text-white shadow-2xl ring-1 ring-white/10 scale-100 md:scale-105 z-10' 
                   : plan.isBestValue
-                    ? 'bg-gray-50 md:bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-brand-neon ring-1 ring-brand-neon/50'
-                    : 'bg-gray-50 md:bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/80'
+                    ? 'bg-gray-100 md:bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-brand-neon ring-1 ring-brand-neon/50'
+                    : 'bg-gray-100 md:bg-white text-brand-black shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/80'
                 }
               `}
             >
