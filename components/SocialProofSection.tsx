@@ -19,7 +19,7 @@ const testimonials = [
     name: "Juliana Mendes",
     role: "Analista de RH",
     text: "Muito intuitivo. Criei a vaga, divulguei o link e os melhores candidatos apareceram no topo.",
-    image: "https://images.unsplash.com/photo-1598550874175-4d7112ee7f38?auto=format&fit=crop&w=200&q=80"
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
   }
 ];
 
