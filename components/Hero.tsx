@@ -76,10 +76,10 @@ export const Hero: React.FC = () => {
               Empresas inovadoras confiam na Elevva
             </p>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-              <span className="text-xl font-bold font-serif tracking-tighter">Votorantim</span>
-              <span className="text-xl font-bold tracking-tight">Natura</span>
-              <span className="text-xl font-bold font-serif tracking-widest">TOTVS</span>
-              <span className="text-xl font-bold tracking-tighter">Magazine Luiza</span>
+              <span className="text-xl font-bold font-serif tracking-tighter">Vectra Logistica</span>
+              <span className="text-xl font-bold tracking-tight">Sumaria Varejo</span>
+              <span className="text-xl font-bold font-serif tracking-widest">JLOG</span>
+              <span className="text-xl font-bold tracking-tighter">Atrium</span>
             </div>
           </div>
 
