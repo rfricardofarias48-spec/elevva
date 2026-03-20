@@ -38,7 +38,7 @@ const plans = [
     period: "",
     desc: "Solução sob medida para grandes operações.",
     features: [
-      "Vagas Ilimitadas (Simultâneas)",
+      "Vagas Ilimitadas",
       "Análise Ilimitada de Currículos",
       "Integração via Webhook (n8n)",
       "Atendimento Prioritário"

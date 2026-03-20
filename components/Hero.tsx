@@ -51,9 +51,8 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Dashboard Preview Mockup */}
-          <div className="mt-20 w-full max-w-5xl relative animate-fade-in-up" style={{ animationDelay: '400ms', opacity: 0 }}>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent z-20"></div>
-            <div className="relative rounded-t-2xl md:rounded-t-[2rem] border border-gray-700 bg-[#111827] shadow-2xl overflow-hidden">
+          <div className="mt-20 w-full max-w-6xl relative animate-fade-in-up" style={{ animationDelay: '400ms', opacity: 0 }}>
+            <div className="relative rounded-2xl md:rounded-[2rem] border border-gray-700 bg-[#111827] shadow-2xl overflow-hidden">
               {/* Browser Chrome */}
               <div className="h-12 border-b border-gray-800 flex items-center px-6 gap-2 bg-gray-900">
                 <div className="w-3 h-3 rounded-full bg-red-400"></div>
