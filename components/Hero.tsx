@@ -60,11 +60,11 @@ export const Hero: React.FC = () => {
                 <div className="w-3 h-3 rounded-full bg-green-400"></div>
               </div>
               {/* Mockup Content */}
-              <div className="aspect-[16/9] flex items-center justify-center relative overflow-hidden">
+              <div className="flex items-center justify-center relative overflow-hidden bg-[#111827]">
                  <img 
                    src="https://ik.imagekit.io/xsbrdnr0y/imagem%20tela%20.png" 
                    alt="Dashboard Elevva" 
-                   className="w-full h-full object-cover object-top"
+                   className="w-full h-auto object-contain"
                  />
               </div>
             </div>
