@@ -2,7 +2,7 @@ import React from 'react';
 
 export const BentoSection: React.FC = () => {
   return (
-    <section id="bento" className="py-24 lg:py-32 bg-[#111827] relative overflow-hidden">
+    <section id="bento" className="py-16 lg:py-20 bg-[#111827] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-4xl mx-auto mb-20 animate-fade-in-up">

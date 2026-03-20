@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) => (
             <div key={link.label} className="relative group">
               <a 
@@ -101,15 +101,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         <div className="hidden lg:flex items-center gap-4">
           <a 
             href="https://app.elevva.net.br"
-            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+            className="bg-brand-green text-[#111827] px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#b3e600] transition-colors"
           >
             Entrar
-          </a>
-          <a 
-            href="https://app.elevva.net.br"
-            className="bg-brand-green text-[#111827] px-5 py-2.5 rounded-full text-sm font-bold hover:bg-gray-800 transition-colors"
-          >
-            Teste grátis
           </a>
         </div>
 
@@ -154,7 +148,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             href="https://app.elevva.net.br"
             className="w-full bg-brand-green text-[#111827] py-4 rounded-full font-bold mt-4 text-center cursor-pointer block"
           >
-            Teste grátis
+            Entrar
           </a>
         </div>
       )}
