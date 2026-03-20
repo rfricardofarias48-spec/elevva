@@ -77,7 +77,7 @@ export const Pricing: React.FC = () => {
             Preços simples. <span className="text-gray-500">Retorno imediato.</span>
           </h2>
           
-          <p className="text-lg text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 font-medium leading-relaxed whitespace-nowrap">
             Escolha o plano ideal para o momento da sua empresa. Sem taxas ocultas, cancele quando quiser.
           </p>
         </div>
