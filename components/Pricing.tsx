@@ -24,8 +24,8 @@ const plans = [
   {
     name: "Pro",
     monthlyPrice: "799,90",
-    yearlyPrice: "664,92",
-    yearlyTotal: "7.979,04",
+    yearlyPrice: "639,90",
+    yearlyTotal: "7.679,04",
     period: "/mês",
     desc: "Tração total para seu RH com mais vagas.",
     features: [
