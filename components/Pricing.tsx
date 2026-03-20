@@ -51,7 +51,7 @@ const plans = [
 
 export const Pricing: React.FC = () => {
   return (
-    <section id="pricing" className="py-24 lg:py-32 bg-[#111827] relative overflow-hidden">
+    <section id="pricing" className="py-16 lg:py-20 bg-[#111827] relative overflow-hidden">
       
       <div className="max-w-[95%] 2xl:max-w-[1200px] mx-auto px-6 relative z-10">
         

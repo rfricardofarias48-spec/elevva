@@ -3,7 +3,7 @@ import { ChevronRight } from 'lucide-react';
 
 export const HowItWorksSection: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-24 lg:py-32 bg-gray-900 relative overflow-hidden">
+    <section id="how-it-works" className="py-16 lg:py-20 bg-gray-900 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-green/10 blur-[100px] rounded-full pointer-events-none"></div>
 

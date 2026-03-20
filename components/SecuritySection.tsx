@@ -3,7 +3,7 @@ import { ShieldCheck, Lock, Server, Fingerprint, FileCheck, EyeOff } from 'lucid
 
 export const SecuritySection: React.FC = () => {
   return (
-    <section id="security" className="py-24 lg:py-32 bg-[#111827] text-white relative overflow-hidden border-t border-white/5">
+    <section id="security" className="py-16 lg:py-20 bg-[#111827] text-white relative overflow-hidden border-t border-white/5">
       {/* Decorative background elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none"></div>
 
