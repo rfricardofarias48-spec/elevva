@@ -61,30 +61,12 @@ export const Hero: React.FC = () => {
                 <div className="w-3 h-3 rounded-full bg-green-400"></div>
               </div>
               {/* Mockup Content */}
-              <div className="p-8 md:p-12 aspect-[16/9] flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-80 mix-blend-luminosity">
-                 {/* Abstract UI Elements */}
-                 <div className="absolute inset-0 bg-[#111827]/60 backdrop-blur-[2px]"></div>
-                 <div className="relative z-10 w-full max-w-3xl bg-[#111827]/80 border border-gray-700 rounded-2xl p-6 backdrop-blur-md shadow-2xl">
-                    <div className="h-8 w-1/3 bg-gray-700 rounded-lg mb-6"></div>
-                    <div className="space-y-4">
-                      <div className="h-16 w-full bg-[#111827] rounded-xl border border-gray-800 flex items-center px-4 gap-4 shadow-sm">
-                         <div className="w-10 h-10 rounded-full bg-brand-green/20"></div>
-                         <div className="flex-1">
-                           <div className="h-4 w-1/4 bg-gray-700 rounded mb-2"></div>
-                           <div className="h-3 w-1/2 bg-gray-800 rounded"></div>
-                         </div>
-                         <div className="w-24 h-8 rounded-full bg-brand-green/10 border border-brand-green/20"></div>
-                      </div>
-                      <div className="h-16 w-full bg-[#111827] rounded-xl border border-gray-800 flex items-center px-4 gap-4 shadow-sm">
-                         <div className="w-10 h-10 rounded-full bg-blue-500/10"></div>
-                         <div className="flex-1">
-                           <div className="h-4 w-1/3 bg-gray-700 rounded mb-2"></div>
-                           <div className="h-3 w-2/5 bg-gray-800 rounded"></div>
-                         </div>
-                         <div className="w-24 h-8 rounded-full bg-gray-800 border border-gray-700"></div>
-                      </div>
-                    </div>
-                 </div>
+              <div className="aspect-[16/9] flex items-center justify-center relative overflow-hidden">
+                 <img 
+                   src="https://ik.imagekit.io/xsbrdnr0y/imagem%20tela%20.png" 
+                   alt="Dashboard Elevva" 
+                   className="w-full h-full object-cover object-top"
+                 />
               </div>
             </div>
           </div>
