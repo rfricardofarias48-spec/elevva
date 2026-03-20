@@ -69,15 +69,12 @@ export const Pricing: React.FC = () => {
         
         {/* HEADER SECTION */}
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 text-white text-sm font-semibold tracking-wide mb-6">
-            <Sparkles size={16} />
-            <span>Investimento</span>
-          </div>
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-[1.1]">
             Preços simples. <span className="text-gray-500">Retorno imediato.</span>
           </h2>
           
-          <p className="text-lg text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-gray-500 font-medium leading-relaxed whitespace-nowrap">
             Escolha o plano ideal para o momento da sua empresa. Sem taxas ocultas, cancele quando quiser.
           </p>
         </div>
