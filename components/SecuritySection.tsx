@@ -61,7 +61,7 @@ export const SecuritySection: React.FC = () => {
         </div>
 
         {/* Trust Badges */}
-        <div className="mt-16 pt-10 border-t border-white/10 flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+        <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
           <div className="flex items-center gap-3">
             <ShieldCheck size={32} className="text-brand-green" />
             <div className="flex flex-col">
