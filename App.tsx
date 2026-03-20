@@ -2,10 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Features } from './components/Features';
-import { SocialProofSection } from './components/SocialProofSection';
-import { ProductShowcase } from './components/ProductShowcase';
-import { DemoSection } from './components/DemoSection';
+import { BentoSection } from './components/BentoSection';
+import { HowItWorksSection } from './components/HowItWorksSection';
+import { SecuritySection } from './components/SecuritySection';
 import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 import { CookieConsent } from './components/CookieConsent';
@@ -14,7 +13,6 @@ import { TermsOfUseModal } from './components/TermsOfUseModal';
 import { LoginScreen } from './components/LoginScreen';
 import { BackgroundSquares } from './components/BackgroundSquares';
 import { WhatsAppButton } from './components/WhatsAppButton';
-import { IntegrationsSection } from './components/IntegrationsSection';
 
 const App: React.FC = () => {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
@@ -48,7 +46,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col font-sans relative bg-white text-brand-black selection:bg-brand-neon selection:text-black overflow-hidden">
+    <div className="min-h-screen flex flex-col font-sans relative bg-[#111827] text-white selection:bg-brand-green selection:text-white overflow-hidden">
       
       {/* Subtle Animated Background */}
       <BackgroundSquares />
@@ -57,11 +55,9 @@ const App: React.FC = () => {
         <Navbar onNavigate={navigate} />
         <main className="flex-grow">
           <Hero />
-          <IntegrationsSection />
-          <ProductShowcase />
-          <DemoSection />
-          <Features />
-          <SocialProofSection />
+          <BentoSection />
+          <HowItWorksSection />
+          <SecuritySection />
           <Pricing />
         </main>
         

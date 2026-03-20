@@ -12,25 +12,25 @@ export const About: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
               Revolucionando o RH com tecnologia de ponta
             </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-400 mb-6 leading-relaxed">
               A Elevva nasceu da necessidade de agilidade em processos seletivos massivos. Somos uma equipe de engenheiros de IA e especialistas em Recursos Humanos unidos por um propósito: devolver o tempo estratégico aos recrutadores.
             </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-400 mb-8 leading-relaxed">
               Acreditamos que a tecnologia não substitui o fator humano, mas o potencializa. Nossa plataforma remove o trabalho braçal de leitura de currículos, permitindo que você foque nas pessoas.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <div className="bg-[#111827] p-6 rounded-2xl shadow-sm border border-gray-800">
                 <Target className="text-brand-600 mb-3" size={32} />
                 <h4 className="font-bold text-xl mb-1">+1M</h4>
                 <p className="text-sm text-gray-500">CVs Analisados</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <div className="bg-[#111827] p-6 rounded-2xl shadow-sm border border-gray-800">
                 <Users2 className="text-brand-600 mb-3" size={32} />
                 <h4 className="font-bold text-xl mb-1">500+</h4>
                 <p className="text-sm text-gray-500">Empresas Ativas</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <div className="bg-[#111827] p-6 rounded-2xl shadow-sm border border-gray-800">
                 <Award className="text-brand-600 mb-3" size={32} />
                 <h4 className="font-bold text-xl mb-1">99.8%</h4>
                 <p className="text-sm text-gray-500">Precisão</p>
@@ -45,7 +45,7 @@ export const About: React.FC = () => {
                alt="Equipe Elevva" 
                className="relative rounded-[2rem] shadow-2xl w-full object-cover h-[600px]"
              />
-             <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white">
+             <div className="absolute bottom-8 left-8 right-8 bg-gray-900/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-gray-700">
                 <p className="text-brand-dark font-medium italic">
                   "A Elevva transformou nossa operação. O que levava 3 dias, agora fazemos em 20 minutos."
                 </p>

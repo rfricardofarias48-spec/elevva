@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Sparkles, Download } from 'lucide-react';
 
 interface FooterProps {
   onOpenPolicy: () => void;
@@ -27,62 +28,138 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenTerms }) => 
     }
   };
 
+  const downloadLogo = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const canvas = document.createElement('canvas');
+    canvas.width = 3840;
+    canvas.height = 2160;
+    const ctx = canvas.getContext('2d');
+    
+    if (ctx) {
+      // Clear background (transparent)
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Setup font (matching the site's font-black tracking-tighter)
+      const fontSize = 800;
+      ctx.font = `900 ${fontSize}px Inter, system-ui, sans-serif`;
+      ctx.textBaseline = 'middle';
+      ctx.textAlign = 'left';
+      
+      // Handle letter spacing (tracking-tighter is -0.05em)
+      if ('letterSpacing' in ctx) {
+        (ctx as any).letterSpacing = '-40px';
+      }
+
+      const text = 'Elevva';
+      const dot = '.';
+      
+      // Measure widths to center the whole logo
+      const textWidth = ctx.measureText(text).width;
+      const dotWidth = ctx.measureText(dot).width;
+      const totalWidth = textWidth + dotWidth;
+      
+      const startX = (canvas.width - totalWidth) / 2;
+      const startY = canvas.height / 2;
+
+      // Draw "Elevva" in White
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText(text, startX, startY);
+      
+      // Draw "." in Brand Green
+      ctx.fillStyle = '#22c55e';
+      ctx.fillText(dot, startX + textWidth, startY);
+
+      // Trigger download
+      const dataUrl = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = 'Elevva_Logo_White.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   return (
-    <footer className="bg-black text-white pt-12 pb-8 border-t border-gray-800">
-      <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6">
+    <footer className="bg-[#111827] text-white pt-20 pb-10 border-t border-gray-700">
+      <div className="max-w-[95%] 2xl:max-w-[1200px] mx-auto px-6">
         
-        <div className="grid md:grid-cols-4 gap-8 mb-10">
+        <div className="grid md:grid-cols-4 gap-12 lg:gap-8 mb-20">
           <div className="col-span-1 md:col-span-2">
              <a href="#" onClick={scrollToTop} className="inline-block mb-6 hover:opacity-80 transition-opacity">
-                {/* LOGO VISUAL: TEXTO + PONTO VERDE AJUSTADO (w-2 h-2, translate-y-2) */}
-                <div className="font-display font-black text-2xl tracking-tighter flex items-center gap-1 text-white">
-                  ELEVVA<span className="w-2 h-2 bg-brand-neon rounded-full block translate-y-2"></span>
-                </div>
+                <span className="text-2xl font-black tracking-tighter text-white">
+                  Elevva<span className="text-brand-green">.</span>
+                </span>
              </a>
-             <p className="text-gray-400 max-w-sm mb-8">
-               A plataforma de inteligência artificial que está redefinindo como empresas encontram talentos. Rápido, preciso e sem viés.
+             <p className="text-gray-500 max-w-sm mb-6 leading-relaxed font-medium">
+               Plataforma de Recrutamento e Seleção Autogerida por IA. Escale suas contratações e recupere seu tempo.
              </p>
+             <button 
+               onClick={downloadLogo}
+               className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm font-bold text-gray-300 hover:text-white transition-colors cursor-pointer"
+             >
+               <Download size={16} />
+               Baixar Logo 4K
+             </button>
           </div>
 
           <div>
-             <h4 className="font-bold text-lg mb-6">Produto</h4>
-             <ul className="space-y-4 text-gray-400">
+             <h4 className="font-bold text-gray-400 uppercase tracking-wider text-xs mb-6">Plataforma</h4>
+             <ul className="space-y-4 text-gray-400 text-sm font-medium">
                 <li>
                   <a 
-                    href="#features" 
-                    onClick={(e) => scrollToSection(e, 'features')}
-                    className="hover:text-brand-neon transition-colors cursor-pointer"
+                    href="#bento" 
+                    onClick={(e) => scrollToSection(e, 'bento')}
+                    className="hover:text-white transition-colors cursor-pointer"
                   >
                     Funcionalidades
                   </a>
                 </li>
                 <li>
                   <a 
+                    href="#how-it-works" 
+                    onClick={(e) => scrollToSection(e, 'how-it-works')}
+                    className="hover:text-white transition-colors cursor-pointer"
+                  >
+                    Como Funciona
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#security" 
+                    onClick={(e) => scrollToSection(e, 'security')}
+                    className="hover:text-white transition-colors cursor-pointer"
+                  >
+                    Segurança
+                  </a>
+                </li>
+                <li>
+                  <a 
                     href="#pricing" 
                     onClick={(e) => scrollToSection(e, 'pricing')}
-                    className="hover:text-brand-neon transition-colors cursor-pointer"
+                    className="hover:text-white transition-colors cursor-pointer"
                   >
-                    Preços
+                    Planos
                   </a>
                 </li>
              </ul>
           </div>
 
           <div>
-             <h4 className="font-bold text-lg mb-6">Legal</h4>
-             <ul className="space-y-4 text-gray-400">
+             <h4 className="font-bold text-gray-400 uppercase tracking-wider text-xs mb-6">Legal</h4>
+             <ul className="space-y-4 text-gray-400 text-sm font-medium">
                 <li>
-                  <button onClick={onOpenTerms} className="hover:text-brand-neon transition-colors text-left">
+                  <button onClick={onOpenTerms} className="hover:text-white transition-colors text-left">
                     Termos de Uso
                   </button>
                 </li>
                 <li>
-                  <button onClick={onOpenPolicy} className="hover:text-brand-neon transition-colors text-left">
+                  <button onClick={onOpenPolicy} className="hover:text-white transition-colors text-left">
                     Privacidade
                   </button>
                 </li>
                 <li>
-                  <button onClick={onOpenPolicy} className="hover:text-brand-neon transition-colors text-left">
+                  <button onClick={onOpenPolicy} className="hover:text-white transition-colors text-left">
                     Cookies
                   </button>
                 </li>
@@ -90,11 +167,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenTerms }) => 
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
-           <p className="text-gray-500 text-sm">© 2025 Elevva Tecnologia. Todos os direitos reservados.</p>
+        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+           <p className="text-gray-500 text-sm font-medium">© {new Date().getFullYear()} Elevva. Todos os direitos reservados.</p>
            <div className="flex items-center gap-2 text-sm font-bold">
-              <span>Feito no Brasil</span>
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <span className="text-gray-500">Feito no Brasil</span>
+              <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
            </div>
         </div>
 

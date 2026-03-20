@@ -3,13 +3,13 @@ import { Brain, ArrowRight } from 'lucide-react';
 
 export const DemoSection: React.FC = () => {
   return (
-    <section id="demo" className="py-12 lg:py-24 bg-white relative overflow-hidden border-t border-gray-100">
+    <section id="demo" className="py-12 lg:py-24 bg-[#111827] relative overflow-hidden border-t border-gray-800">
       
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-brand-black mb-6 leading-[1.1] tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-[1.1] tracking-tight">
              Relatório <span className="text-gray-400">Detalhado.</span>
           </h2>
           <p className="text-lg md:text-xl font-medium text-gray-500 leading-relaxed">
@@ -33,13 +33,13 @@ export const DemoSection: React.FC = () => {
                   
                   {/* Screen Content */}
                   {/* Ajustado: lg:aspect-[2.1/1] para diminuir a altura vertical da tela */}
-                  <div className="relative rounded-[1.1rem] overflow-hidden bg-white shadow-lg border border-white/5 aspect-[1.75/1] lg:aspect-[2.1/1]">
+                  <div className="relative rounded-[1.1rem] overflow-hidden bg-[#111827] shadow-lg border border-white/5 aspect-[1.75/1] lg:aspect-[2.1/1]">
                     
                     {/* IMAGEM - Visível apenas no Mobile (lg:hidden) */}
                     <img 
                       src="https://ik.imagekit.io/xsbrdnr0y/imagem%20detalhe.png?v=1" 
                       alt="Interface Mobile"
-                      className="w-full h-full object-contain object-center bg-white block lg:hidden scale-[1.05]"
+                      className="w-full h-full object-contain object-center bg-[#111827] block lg:hidden scale-[1.05]"
                       referrerPolicy="no-referrer"
                     />
 
@@ -52,7 +52,7 @@ export const DemoSection: React.FC = () => {
                     />
                     
                     {/* Screen Reflection Glare */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none rounded-[1.1rem]"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#111827]/5 to-transparent pointer-events-none rounded-[1.1rem]"></div>
                   </div>
               </div>
            </div>

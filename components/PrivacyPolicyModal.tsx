@@ -18,28 +18,28 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
       ></div>
 
       {/* Modal Content */}
-      <div className="bg-white w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl relative z-10 flex flex-col overflow-hidden animate-[float_0.3s_ease-out]">
+      <div className="bg-[#111827] w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl relative z-10 flex flex-col overflow-hidden animate-[float_0.3s_ease-out]">
         
         {/* Header */}
-        <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+        <div className="px-6 py-4 border-b border-gray-800 flex justify-between items-center bg-gray-900/50">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-brand-50 rounded-lg text-brand-600">
+            <div className="p-2 bg-brand-green/10 rounded-lg text-brand-green">
               <Shield size={20} />
             </div>
-            <h2 className="text-xl font-bold text-gray-800">Política de Privacidade</h2>
+            <h2 className="text-xl font-bold text-gray-200">Política de Privacidade</h2>
           </div>
           <button 
             onClick={onClose}
-            className="p-2 hover:bg-gray-200 rounded-full transition-colors text-gray-500 hover:text-gray-700"
+            className="p-2 hover:bg-gray-700 rounded-full transition-colors text-gray-500 hover:text-gray-300"
           >
             <X size={20} />
           </button>
         </div>
 
         {/* Scrollable Text Area */}
-        <div className="p-6 md:p-8 overflow-y-auto text-gray-600 leading-relaxed text-sm md:text-base space-y-6">
+        <div className="p-6 md:p-8 overflow-y-auto text-gray-400 leading-relaxed text-sm md:text-base space-y-6">
           
-          <div className="p-4 bg-brand-50 rounded-xl border border-brand-100 mb-6">
+          <div className="p-4 bg-brand-green/10 rounded-xl border border-brand-green/20 mb-6">
             <p className="text-brand-800 font-medium text-sm flex gap-2">
               <Lock size={16} className="shrink-0 mt-0.5" />
               Na Elevva, a segurança dos dados dos candidatos e das empresas é nossa prioridade absoluta. Seguimos rigorosamente a LGPD (Lei Geral de Proteção de Dados).
@@ -47,7 +47,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
           </div>
 
           <section>
-            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-100 mb-3 flex items-center gap-2">
               1. Coleta de Informações
             </h3>
             <p>
@@ -56,7 +56,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
           </section>
 
           <section>
-            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-100 mb-3 flex items-center gap-2">
               2. Uso de Inteligência Artificial
             </h3>
             <p>
@@ -69,7 +69,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
           </section>
 
           <section>
-            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-100 mb-3 flex items-center gap-2">
               3. Armazenamento e Segurança
             </h3>
             <p>
@@ -78,7 +78,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
           </section>
 
           <section>
-            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-100 mb-3 flex items-center gap-2">
               4. Cookies e Tecnologias de Rastreamento
             </h3>
             <p>
@@ -87,7 +87,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
           </section>
 
           <section>
-            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-100 mb-3 flex items-center gap-2">
               5. Seus Direitos (LGPD)
             </h3>
             <ul className="list-disc pl-5 space-y-1">
@@ -98,25 +98,25 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
           </section>
 
           <section>
-            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-100 mb-3 flex items-center gap-2">
               6. Contato
             </h3>
             <p>
-              Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: <a href="mailto:privacidade@elevva.com.br" className="text-brand-600 hover:underline">privacidade@elevva.com.br</a>.
+              Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: <a href="mailto:privacidade@elevva.com.br" className="text-brand-green hover:underline">privacidade@elevva.com.br</a>.
             </p>
           </section>
           
-          <div className="pt-6 border-t border-gray-100 text-xs text-gray-400">
+          <div className="pt-6 border-t border-gray-800 text-xs text-gray-400">
             Última atualização: Fevereiro de 2025. Elevva Tecnologia Ltda. Porto Alegre/RS.
           </div>
 
         </div>
 
         {/* Footer Actions */}
-        <div className="p-4 bg-gray-50 border-t border-gray-100 flex justify-end">
+        <div className="p-4 bg-gray-900 border-t border-gray-800 flex justify-end">
           <button 
             onClick={onClose}
-            className="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg transition-colors shadow-lg shadow-brand-600/20"
+            className="px-6 py-2.5 bg-brand-green hover:bg-[#b3e600] text-[#111827] font-bold rounded-lg transition-colors shadow-lg shadow-brand-green/20"
           >
             Entendido
           </button>

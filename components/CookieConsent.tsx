@@ -34,16 +34,16 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ onOpenPolicy }) =>
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[60] p-2 md:p-6 pointer-events-none flex justify-center">
-      <div className="bg-[#0f172a]/95 backdrop-blur-md border border-white/10 p-4 md:p-6 rounded-2xl shadow-2xl max-w-4xl w-full flex flex-col md:flex-row items-center gap-4 md:gap-6 pointer-events-auto animate-[float_1s_ease-out]">
+      <div className="bg-[#111827]/95 backdrop-blur-md border border-gray-700 p-4 md:p-6 rounded-2xl shadow-2xl max-w-4xl w-full flex flex-col md:flex-row items-center gap-4 md:gap-6 pointer-events-auto animate-[float_1s_ease-out]">
         
         {/* Ícone e Texto */}
         <div className="flex items-start gap-3 flex-1">
-          <div className="p-2 md:p-3 bg-brand-900/50 rounded-xl border border-brand-500/20 text-brand-400 shrink-0">
+          <div className="p-2 md:p-3 bg-brand-green/10 rounded-xl border border-brand-green/20 text-brand-green shrink-0">
             <Cookie size={20} className="md:w-6 md:h-6" />
           </div>
           <div>
             <h4 className="text-white font-bold text-sm md:text-base mb-1">Nós valorizamos sua privacidade</h4>
-            <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
+            <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
               Utilizamos cookies para melhorar sua experiência, analisar o tráfego e personalizar o conteúdo.
             </p>
           </div>
@@ -53,7 +53,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ onOpenPolicy }) =>
         <div className="flex items-center gap-2 md:gap-3 w-full md:w-auto shrink-0">
           <button 
             onClick={onOpenPolicy}
-            className="flex-1 md:flex-none px-3 py-2 md:px-4 md:py-2.5 text-xs md:text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-lg border border-white/10 hover:bg-white/5 flex items-center justify-center gap-2 whitespace-nowrap"
+            className="flex-1 md:flex-none px-3 py-2 md:px-4 md:py-2.5 text-xs md:text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-lg border border-gray-700 hover:bg-gray-900 flex items-center justify-center gap-2 whitespace-nowrap"
           >
             <FileText size={14} className="md:w-4 md:h-4" />
             <span className="hidden sm:inline">Política de Privacidade</span>
@@ -61,7 +61,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ onOpenPolicy }) =>
           </button>
           <button 
             onClick={handleAccept}
-            className="flex-1 md:flex-none px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm font-bold text-white bg-brand-600 hover:bg-brand-500 transition-all rounded-lg shadow-lg shadow-brand-600/20 flex items-center justify-center gap-2 group whitespace-nowrap"
+            className="flex-1 md:flex-none px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm font-bold text-[#111827] bg-brand-green hover:bg-[#b3e600] transition-all rounded-lg shadow-lg shadow-brand-green/20 flex items-center justify-center gap-2 group whitespace-nowrap"
           >
             Aceitar
             <Check size={14} className="md:w-4 md:h-4 group-hover:scale-110 transition-transform" />
@@ -71,7 +71,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ onOpenPolicy }) =>
         {/* Botão Fechar (X) Mobile */}
         <button 
           onClick={handleDecline}
-          className="absolute top-2 right-2 p-2 text-gray-500 hover:text-white md:hidden"
+          className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white md:hidden"
         >
           <X size={16} />
         </button>

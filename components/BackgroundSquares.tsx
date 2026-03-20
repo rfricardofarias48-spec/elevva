@@ -46,12 +46,12 @@ export const BackgroundSquares: React.FC = () => {
           const wave2 = Math.cos(y * 0.01 + time * 0.8);
           const wave3 = Math.sin((x + y) * 0.005 - time * 1.2);
           
-          // Combine waves and map to a subtle alpha value (0 to 0.15)
+          // Combine waves and map to a subtle alpha value (0 to 0.08)
           const combined = (wave1 + wave2 + wave3) / 3;
-          const alpha = Math.max(0, (combined + 1) / 2 * 0.15);
+          const alpha = Math.max(0, (combined + 1) / 2 * 0.08);
           
-          if (alpha > 0.01) {
-            ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
+          if (alpha > 0.005) {
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
             ctx.fillRect(x, y, squareSize, squareSize);
           }
         }

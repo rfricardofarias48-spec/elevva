@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elevva - Recrutamento Inteligente</title>
+    <title>Elevva - O primeiro chefe de recrutamento com IA do mundo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,26 +12,22 @@
           extend: {
             colors: {
               brand: {
-                neon: '#84CC16', // Avocado Green
-                black: '#0F242A', // Dark Blue-Grey
-                dark: '#162C32',
-                gray: '#F3F4F6',
+                green: '#22c55e', // Bright green from the image
+                black: '#111827',
+                gray: '#f9fafb',
                 white: '#FFFFFF',
-                slate: '#E5E7EB'
+                slate: '#e5e7eb'
               }
             },
             fontFamily: {
-              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-              display: ['"Plus Jakarta Sans"', 'sans-serif'],
-            },
-            boxShadow: {
-              'neo': '4px 4px 0px 0px rgba(0,0,0,1)',
-              'neo-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
-              'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+              sans: ['"Inter"', 'sans-serif'],
+              display: ['"Inter"', 'sans-serif'],
+              handwriting: ['"Caveat"', 'cursive'],
             },
             animation: {
               'marquee': 'marquee 25s linear infinite',
               'float': 'float 6s ease-in-out infinite',
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
             },
             keyframes: {
               marquee: {
@@ -41,49 +37,34 @@
               float: {
                 "0%, 100%": { transform: "translateY(0)" },
                 "50%": { transform: "translateY(-10px)" },
+              },
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
               }
             }
           }
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 100px;
       }
       body { 
-        font-family: 'Plus Jakarta Sans', sans-serif; 
+        font-family: 'Inter', sans-serif; 
         background-color: #FFFFFF;
-        color: #050505;
+        color: #FFFFFF;
       }
       
-      /* Estilo de Marca-Texto (Highlight) */
-      .highlight {
-        background-color: #CCFF00;
-        padding: 0 0.2em;
-        border-radius: 4px;
-        display: inline-block;
-        transform: skewX(-2deg);
-      }
-      
-      .highlight-inverse {
-        background-color: #050505;
-        color: #CCFF00;
-        padding: 0 0.2em;
-        border-radius: 4px;
-        display: inline-block;
+      .gradient-bg {
+        background: linear-gradient(135deg, rgba(17,24,39,1) 0%, rgba(31,41,55,1) 50%, rgba(17,24,39,1) 100%);
       }
 
-      /* Card Hover Effect */
-      .neo-card {
-        transition: all 0.2s ease;
-        border: 1px solid #000;
-      }
-      .neo-card:hover {
-        transform: translate(-4px, -4px);
-        box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+      .soft-shadow {
+        box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
       }
     </style>
   <script type="importmap">

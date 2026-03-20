@@ -53,13 +53,13 @@ export const Features: React.FC = () => {
   };
 
   return (
-    <section id="features" className="pt-16 pb-8 lg:pt-24 lg:pb-12 bg-white relative overflow-hidden">
+    <section id="features" className="pt-16 pb-8 lg:pt-24 lg:pb-12 bg-[#111827] relative overflow-hidden">
       
       <div className="max-w-[95%] 2xl:max-w-[1400px] mx-auto px-6 relative z-10">
         
         {/* HEADER SECTION */}
         <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-brand-black mb-6 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 leading-[1.1]">
             Potência máxima <br className="hidden md:block"/>
             <span className="text-gray-400">para seu RH.</span>
           </h2>
@@ -74,20 +74,20 @@ export const Features: React.FC = () => {
            {features.map((feature, idx) => (
              <div 
                key={idx} 
-               className="group relative p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col min-h-[260px]"
+               className="group relative p-6 rounded-2xl bg-[#111827] border border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col min-h-[260px]"
              >
                 <div className="flex items-start justify-between mb-6">
                    {/* Icon Container */}
-                   <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 text-brand-black">
+                   <div className="w-12 h-12 rounded-xl bg-gray-900 flex items-center justify-center border border-gray-800 text-white">
                       {React.cloneElement(feature.icon as React.ReactElement, { size: 24 })}
                    </div>
                    
                    {/* Static Detail - Green Dot */}
-                   <div className="w-2 h-2 rounded-full bg-brand-neon"></div>
+                   <div className="w-2 h-2 rounded-full bg-brand-green"></div>
                 </div>
                 
                 <div className="mt-auto">
-                    <h3 className="text-lg font-bold text-brand-black mb-3 tracking-tight">
+                    <h3 className="text-lg font-bold text-white mb-3 tracking-tight">
                     {feature.title}
                     </h3>
 
