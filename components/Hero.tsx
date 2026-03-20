@@ -40,13 +40,13 @@ export const Hero: React.FC = () => {
               href="https://app.elevva.net.br/register" 
               className="inline-flex items-center justify-center px-8 py-4 bg-brand-green text-[#111827] rounded-full font-bold text-lg transition-all hover:bg-[#b3e600] hover:scale-105 hover:shadow-[0_0_40px_rgba(34,197,94,0.3)] active:scale-95 w-full sm:w-auto"
             >
-              Começar gratuitamente
+              Assinar
               <ChevronRight size={20} className="ml-2" />
             </a>
             
             <button className="inline-flex items-center justify-center px-8 py-4 bg-[#111827] text-white border border-gray-700 rounded-full font-bold text-lg transition-all hover:bg-gray-900 hover:shadow-lg w-full sm:w-auto backdrop-blur-md group">
               <Play size={18} className="mr-2 fill-white group-hover:text-brand-green group-hover:fill-brand-green transition-colors" />
-              Ver demonstração
+              Fale Conosco
             </button>
           </div>
 
