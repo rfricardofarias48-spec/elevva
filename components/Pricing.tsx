@@ -9,7 +9,7 @@ const plans = [
     period: "/mês",
     desc: "Para equipes enxutas e recrutamento ágil.",
     features: [
-      "3 Vagas",
+      "3 Vagas (Simultâneas)",
       "Análise Ilimitada de Currículos",
       "Exportação em PDF"
     ],
@@ -23,7 +23,7 @@ const plans = [
     period: "/mês",
     desc: "Tração total para seu RH com mais vagas.",
     features: [
-      "10 Vagas",
+      "10 Vagas (Simultâneas)",
       "Análise Ilimitada de Currículos",
       "Ranking Automático"
     ],
@@ -38,7 +38,7 @@ const plans = [
     period: "",
     desc: "Solução sob medida para grandes operações.",
     features: [
-      "Vagas Ilimitadas",
+      "Vagas Ilimitadas (Simultâneas)",
       "Análise Ilimitada de Currículos",
       "Integração via Webhook (n8n)",
       "Atendimento Prioritário"
