@@ -94,13 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenTerms }) => 
              <p className="text-gray-500 max-w-sm mb-6 leading-relaxed font-medium">
                Plataforma de Recrutamento e Seleção Autogerida por IA. Escale suas contratações e recupere seu tempo.
              </p>
-             <button 
-               onClick={downloadLogo}
-               className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm font-bold text-gray-300 hover:text-white transition-colors cursor-pointer"
-             >
-               <Download size={16} />
-               Baixar Logo 4K
-             </button>
+
           </div>
 
           <div>
